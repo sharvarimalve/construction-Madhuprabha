@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { MapPin, Home, Calendar, ExternalLink, Filter, Grid, List } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { projectsData } from '../mockData';
 import Footer from '../components/Footer';
 
@@ -8,7 +9,7 @@ const ProjectsPage = () => {
   const [filter, setFilter] = useState('all');
   const [sortBy, setSortBy] = useState('recent');
 
-  const projectTypes = ['all', 'Villa', 'Apartments', 'Duplex', 'Row Houses', 'Independent House', 'Penthouse'];
+  const projectTypes = ['all'];
 
   const filteredProjects = projectsData.filter(project => 
     filter === 'all' || project.type.toLowerCase().includes(filter.toLowerCase())
@@ -53,7 +54,7 @@ const ProjectsPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center space-y-6 lg:space-y-0">
             {/* Filters */}
-            <div className="flex flex-wrap items-center gap-4">
+            {/* <div className="flex flex-wrap items-center gap-4">
               <div className="flex items-center space-x-2">
                 <Filter className="w-5 h-5 text-gray-500" />
                 <span className="text-sm font-medium text-gray-700">Filter by:</span>
@@ -73,18 +74,11 @@ const ProjectsPage = () => {
                   </button>
                 ))}
               </div>
-            </div>
+            </div> */}
 
             {/* Sort & View Controls */}
             <div className="flex items-center space-x-4">
-              <select
-                value={sortBy}
-                onChange={(e) => setSortBy(e.target.value)}
-                className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent outline-none"
-              >
-                <option value="recent">Most Recent</option>
-                <option value="area">By Area</option>
-              </select>
+             
 
               <div className="flex bg-gray-100 rounded-lg p-1">
                 <button
@@ -141,9 +135,9 @@ const ProjectsPage = () => {
 
                     {/* Hover Overlay */}
                     <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <button className="p-3 bg-white/90 backdrop-blur-sm text-orange-600 rounded-full hover:bg-white transform hover:scale-110 transition-all duration-300 shadow-lg">
+                      <Link to={`/project/${project.id}`} className="p-3 bg-white/90 backdrop-blur-sm text-orange-600 rounded-full hover:bg-white transform hover:scale-110 transition-all duration-300 shadow-lg">
                         <ExternalLink className="w-6 h-6" />
-                      </button>
+                      </Link>
                     </div>
                   </div>
 
@@ -172,9 +166,9 @@ const ProjectsPage = () => {
                       {project.description}
                     </p>
 
-                    <button className="w-full py-3 px-4 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-xl hover:from-orange-600 hover:to-red-700 transform hover:scale-105 transition-all duration-300 shadow-lg">
+                    <Link to={`/project/${project.id}`} className="w-full inline-block text-center py-3 px-4 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-xl hover:from-orange-600 hover:to-red-700 transform hover:scale-105 transition-all duration-300 shadow-lg">
                       View Details
-                    </button>
+                    </Link>
                   </div>
                 </div>
               ))}
@@ -233,10 +227,10 @@ const ProjectsPage = () => {
                       </div>
 
                       <div className="flex justify-end mt-6">
-                        <button className="px-6 py-3 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-xl hover:from-orange-600 hover:to-red-700 transform hover:scale-105 transition-all duration-300 shadow-lg flex items-center space-x-2">
+                        <Link to={`/project/${project.id}`} className="px-6 py-3 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-xl hover:from-orange-600 hover:to-red-700 transform hover:scale-105 transition-all duration-300 shadow-lg flex items-center space-x-2">
                           <span>View Details</span>
                           <ExternalLink className="w-4 h-4" />
-                        </button>
+                        </Link>
                       </div>
                     </div>
                   </div>
