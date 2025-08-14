@@ -41,18 +41,13 @@ const Hero = () => {
               index === currentSlide ? 'opacity-100 scale-100' : 'opacity-0 scale-105'
             }`}
           >
-            {/* Background Image with advanced overlay */}
+            {/* Background Image */}
             <div className="absolute inset-0">
               <img
                 src={slide.image}
                 alt={slide.title}
                 className="w-full h-full object-cover"
               />
-              
-              {/* Multiple gradient overlays for depth */}
-              <div className="absolute inset-0 bg-gradient-to-r from-slate-900/90 via-slate-800/70 to-slate-900/40"></div>
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-slate-800/30"></div>
-              <div className="absolute inset-0 bg-gradient-to-br from-amber-900/20 via-transparent to-yellow-900/20"></div>
             </div>
 
 
