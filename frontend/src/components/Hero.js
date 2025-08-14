@@ -46,7 +46,7 @@ const Hero = () => {
               <img
                 src={slide.image}
                 alt={slide.title}
-                className="w-full h-full object-cover lg:object-fill"
+                className="w-full h-full object-fill lg:object-fill"
                 loading={index === 0 ? "eager" : "lazy"}
               />
             </div>
