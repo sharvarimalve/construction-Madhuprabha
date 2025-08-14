@@ -8,7 +8,7 @@ export const projectsData = [
     area: "3500 sq ft",
     type: "Residential Villa",
     status: "Completed",
-    image: "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=500&h=300&fit=crop&crop=center",
+    image: "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=500&h=350&fit=crop",
     completionDate: "March 2024",
     description: "Modern luxury villa with contemporary architecture and premium finishes."
   },
@@ -19,7 +19,7 @@ export const projectsData = [
     area: "1800-2400 sq ft",
     type: "Residential Apartments", 
     status: "Completed",
-    image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=500&h=300&fit=crop&crop=center",
+    image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=500&h=350&fit=crop",
     completionDate: "January 2024",
     description: "25-unit premium apartment complex with modern amenities."
   },
@@ -30,7 +30,7 @@ export const projectsData = [
     area: "2800 sq ft",
     type: "Duplex Villa",
     status: "Completed", 
-    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=500&h=300&fit=crop&crop=center",
+    image: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=500&h=350&fit=crop",
     completionDate: "December 2023",
     description: "Spacious duplex with garden and parking facility."
   },
@@ -41,7 +41,7 @@ export const projectsData = [
     area: "2200 sq ft each",
     type: "Row Houses",
     status: "Completed",
-    image: "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=500&h=300&fit=crop&crop=center",
+    image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=500&h=350&fit=crop",
     completionDate: "September 2023",
     description: "Modern row houses with contemporary design and premium amenities."
   },
@@ -52,7 +52,7 @@ export const projectsData = [
     area: "1900 sq ft",
     type: "Independent House",
     status: "Completed",
-    image: "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=500&h=300&fit=crop&crop=center",
+    image: "https://images.unsplash.com/photo-1448630360428-65456885c650?w=500&h=350&fit=crop",
     completionDate: "August 2023",
     description: "Comfortable family home with traditional and modern elements."
   },
@@ -63,7 +63,7 @@ export const projectsData = [
     area: "4200 sq ft",
     type: "Penthouse",
     status: "Completed",
-    image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=500&h=300&fit=crop&crop=center",
+    image: "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=500&h=350&fit=crop",
     completionDate: "June 2023",
     description: "Luxury penthouse with panoramic city views and rooftop terrace."
   }
@@ -72,21 +72,21 @@ export const projectsData = [
 export const carouselData = [
   {
     id: 1,
-    image: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=1200&h=600&fit=crop&crop=center",
+    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1400&h=800&fit=crop",
     title: "Building Dreams Into Reality",
     subtitle: "Premium Residential Construction Services",
     description: "Creating exceptional homes with quality craftsmanship and modern design"
   },
   {
     id: 2,
-    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&h=600&fit=crop&crop=center",
+    image: "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=1400&h=800&fit=crop",
     title: "Quality Construction Excellence", 
     subtitle: "Trusted by 500+ Families",
     description: "Transform your vision into beautiful, lasting residential spaces"
   },
   {
     id: 3,
-    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1200&h=600&fit=crop&crop=center",
+    image: "https://images.unsplash.com/photo-1448630360428-65456885c650?w=1400&h=800&fit=crop",
     title: "Modern Living Solutions",
     subtitle: "Innovative Residential Designs",
     description: "Contemporary homes designed for modern lifestyle and comfort"
@@ -96,38 +96,38 @@ export const carouselData = [
 export const galleryImages = [
   {
     id: 1,
-    url: "https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?w=400&h=300&fit=crop&crop=center",
-    title: "Construction Progress",
+    url: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400&h=300&fit=crop",
+    title: "Modern Architecture",
     category: "image"
   },
   {
     id: 2,
-    url: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=400&h=300&fit=crop&crop=center",
-    title: "Foundation Work",
+    url: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=400&h=300&fit=crop",
+    title: "Residential Complex",
     category: "image"
   },
   {
     id: 3,
-    url: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=400&h=300&fit=crop&crop=center",
-    title: "Interior Design",
+    url: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=400&h=300&fit=crop",
+    title: "Luxury Villa",
     category: "image"
   },
   {
     id: 4,
-    url: "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=400&h=300&fit=crop&crop=center",
-    title: "Modern Kitchen",
+    url: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=400&h=300&fit=crop",
+    title: "Contemporary Home",
     category: "image"
   },
   {
     id: 5,
-    url: "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=400&h=300&fit=crop&crop=center",
-    title: "Exterior View",
+    url: "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=400&h=300&fit=crop",
+    title: "Family House",
     category: "image"
   },
   {
     id: 6,
-    url: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=400&h=300&fit=crop&crop=center",
-    title: "Living Room",
+    url: "https://images.unsplash.com/photo-1448630360428-65456885c650?w=400&h=300&fit=crop",
+    title: "Urban Living",
     category: "image"
   }
 ];
@@ -135,29 +135,29 @@ export const galleryImages = [
 export const galleryVideos = [
   {
     id: 1,
-    thumbnail: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=400&h=300&fit=crop&crop=center",
-    title: "Construction Time-lapse",
+    thumbnail: "https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?w=400&h=300&fit=crop",
+    title: "Construction Process",
     category: "video",
     duration: "2:30"
   },
   {
     id: 2, 
-    thumbnail: "https://images.unsplash.com/photo-1583608205776-bfd35f0d9f83?w=400&h=300&fit=crop&crop=center",
-    title: "Villa Walkthrough",
+    thumbnail: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=400&h=300&fit=crop",
+    title: "Villa Tour",
     category: "video",
     duration: "1:45"
   },
   {
     id: 3,
-    thumbnail: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=400&h=300&fit=crop&crop=center",
-    title: "Project Overview",
+    thumbnail: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=400&h=300&fit=crop",
+    title: "Project Timeline",
     category: "video", 
     duration: "3:15"
   },
   {
     id: 4,
-    thumbnail: "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=400&h=300&fit=crop&crop=center",
-    title: "Completion Ceremony",
+    thumbnail: "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=400&h=300&fit=crop",
+    title: "Handover Ceremony",
     category: "video",
     duration: "1:20"
   }
