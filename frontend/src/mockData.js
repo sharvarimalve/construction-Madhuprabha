@@ -23,12 +23,10 @@ export const projectsData = [
       "2-car covered parking"
     ],
     gallery: [
-      "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1448630360428-65456885c650?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=800&h=600&fit=crop"
+      "https://ashishconstruction.in/wp-content/uploads/2025/05/IMG-20250514-WA0045.jpg",
+      "https://ashishconstruction.in/wp-content/uploads/2025/05/IMG-20250514-WA0040-Copy.jpg",
+      "https://ashishconstruction.in/wp-content/uploads/2025/05/IMG-20250514-WA0039-Copy.jpg",
+      "https://ashishconstruction.in/wp-content/uploads/2025/05/IMG-20250514-WA0044-Copy.jpg",
     ]
   },
   {
@@ -108,15 +106,15 @@ export const currentProjectsData = [
     image: "https://madhuprabhaconstructions.in/images/building.jfif",
     description: "A 5 level 3BHK luxurious park view apartment located in the lap of nature. A peaceful location in the heart of the city where you can enjoy your mornings with blissful greenery. A Perfect Home with Modern Amenities at Abhyankar Nagar, Nagpur.",
     
-    fullDescription: "Currently under construction, this prestigious 15-floor luxury apartment complex will feature 40 premium units with breathtaking city views. The project includes a sky lounge, infinity pool, fitness center, and landscaped gardens. Each apartment is designed with premium finishes and smart home features.",
+    fullDescription: "Currently under construction, this prestigious 5-floor luxury apartment complex will feature 40 premium units with breathtaking city views. The project includes a sky lounge, infinity pool, fitness center, and landscaped gardens. Each apartment is designed with premium finishes and smart home features.",
     features: [
       "40 luxury apartments (2-4 BHK)",
-      "15-floor high-rise building",  
+      "5-floor high-rise building",  
       "Sky lounge with city views",
       "Infinity pool and deck",
       "State-of-the-art fitness center",
       "Landscaped podium gardens",
-      "3-level basement parking",
+      "5-level basement parking",
       "24/7 concierge service"
     ],
     gallery: [
@@ -273,34 +271,46 @@ export const galleryVideos = [
 export const testimonials = [
   {
     id: 1,
-    name: "Rajesh Kumar",
-    location: "Bandra West",
+    name: "Dr. Ankita Randhir",
+    location: "Nagpur",
     rating: 5,
-    text: "Exceptional quality and timely delivery. Our dream home became reality with Madhuprabha Construction.",
-    project: "Luxury Villa"
+    text: "Very good and well contructed project.Happy with the interior and furniture of gym and party area.Satisfied with the builders and his staff regarding cooperation",
   },
   {
     id: 2,
-    name: "Priya Sharma", 
-    location: "Andheri East",
+    name: "Manoj Sharma",
+    location: "Nagpur",
     rating: 5,
-    text: "Professional team with great attention to detail. Highly recommended for residential construction.",
-    project: "Premium Apartment"
+    text: "An absolutely phenomenal project with amazing construction quality",
+    
   },
   {
     id: 3,
-    name: "Amit Patel",
-    location: "Thane West", 
+    name: "Dinesh Badoniya",
+    location: "Nagpur", 
     rating: 5,
-    text: "Outstanding workmanship and excellent customer service throughout the project.",
-    project: "Duplex Home"
-  }
+    text: "The construction of the scheme is very good, there is adequate lighting, full care has been taken of sunlight, the outer look and arrangement is very excellent.",
+  
+  },
+    
 ];
 
 export const aboutUsData = {
   title: "About Madhu Prabha Construction",
   shortDescription: "Leading residential construction company with 20 Glorious Years of experience in creating quality homes.",
-  fullDescription: `With 20 Glorious Year of Creativity in the construction industry, Madhu Prabha Construction a unit of Ashish Construction has been a trusted name in delivering quality construction services. We specialize in residential, commercial, and industrial projects.`,
+  fullDescription: ` Madhu Prabha Constructions began its journey in 2005 as Ashish Construction,
+                 founded with a simple yet powerful vision: to build structures that not only
+                  meet but exceed expectations. Over the years, we have evolved from a small 
+                  construction company to one of Maharashtra's most trusted construction partners.
+                  Our transformation to Madhu Prabha Constructions reflects our growth while maintaining 
+               the core values that have guided us from the beginning. We believe that construction is
+                not just about building structures; it's about creating spaces where lives unfold, businesses 
+                thrive, and communities flourish.
+                  Today, with over 500 completed projects and more than 1000 satisfied clients, we continue 
+               to set new standards in construction excellence, always staying true to our founding principles 
+               of quality, integrity, and customer satisfaction.                
+                  
+                  `,
   experience: "20 Glorious Years",
   projectsCompleted: "200+",
   happyClients: "150+",

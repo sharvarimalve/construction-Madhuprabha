@@ -21,6 +21,11 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Ensure each navigation starts at top without creating new components
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
+
   const navItems = [
     { name: 'Home', path: '/', icon: Home },
     { name: 'Projects', path: '/projects', icon: Building },

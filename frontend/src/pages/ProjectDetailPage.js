@@ -115,7 +115,7 @@ const ProjectDetailPage = () => {
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-96 object-cover cursor-pointer"
+                  className="w-full h-96 object-fill cursor-pointer"
                   onClick={() => openLightbox(0)}
                 />
                 
@@ -251,12 +251,9 @@ const ProjectDetailPage = () => {
                       <TrendingUp className="w-6 h-6 text-slate-500 mt-1 flex-shrink-0" />
                       <div>
                         <div className="font-semibold text-slate-900">Progress</div>
-                        <div className="text-slate-600">{project.progress} Complete</div>
+                        <div className="text-slate-600">{project.progress}</div>
                         <div className="mt-2 w-full bg-slate-200 rounded-full h-2">
-                          <div 
-                            className="h-full bg-gradient-to-r from-emerald-500 to-green-600 rounded-full"
-                            style={{ width: project.progress }}
-                          ></div>
+                          
                         </div>
                       </div>
                     </div>
