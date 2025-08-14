@@ -5,10 +5,9 @@ import { contactData } from '../mockData';
 
 const ContactSection = () => {
   const contactMethods = [
-    { icon: Phone, title: "Call Us", detail: contactData.phone, color: "from-blue-500 to-cyan-600" },
+    { icon: Phone, title: "Call Us", detail: contactData.phone1, secondDetail: contactData.phone2, color: "from-blue-500 to-cyan-600" },
     { icon: Mail, title: "Email Us", detail: contactData.email, color: "from-emerald-500 to-green-600" },
-    { icon: MapPin, title: "Visit Us", detail: "Andheri West, Mumbai", color: "from-purple-500 to-violet-600" },
-    { icon: Clock, title: "Working Hours", detail: "Mon-Sat: 9AM-6PM", color: "from-amber-500 to-orange-600" }
+    { icon: MapPin, title: "Visit Us", detail: contactData.address, link: contactData.googleMapsUrl, color: "from-purple-500 to-violet-600" }
   ];
 
   return (
@@ -70,8 +69,19 @@ const ContactSection = () => {
                     </div>
                     
                     <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-amber-600 transition-colors duration-300">{method.title}</h3>
-                    <p className="text-slate-700 font-medium mb-1">{method.detail}</p>
-                    <p className="text-slate-500 text-sm">Click to connect</p>
+                    <p className="text-slate-700 font-medium mb-1">
+                      {method.link ? (
+                        <a href={method.link} target="_blank" rel="noopener noreferrer" className="hover:text-amber-600 transition-colors">
+                          {method.detail}
+                        </a>
+                      ) : (
+                        method.detail
+                      )}
+                    </p>
+                    {method.secondDetail && (
+                      <p className="text-slate-700 font-medium mb-1">{method.secondDetail}</p>
+                    )}
+                    <p className="text-slate-500 text-sm">{method.link ? "Click to view on map" : "Click to connect"}</p>
                   </div>
                 );
               })}
@@ -201,10 +211,11 @@ const ContactSection = () => {
                   </div>
                 </div>
                 <div className="flex items-start space-x-4 p-4 rounded-2xl bg-slate-700/50 backdrop-blur-sm hover:bg-slate-600/50 transition-colors duration-300">
-                  <Clock className="w-6 h-6 mt-1 text-amber-400 flex-shrink-0" />
+                  <Phone className="w-6 h-6 mt-1 text-amber-400 flex-shrink-0" />
                   <div>
-                    <p className="font-semibold text-amber-200">Office Hours</p>
-                    <p className="text-sm text-slate-300">{contactData.workingHours}</p>
+                    <p className="font-semibold text-amber-200">Contact Numbers</p>
+                    <p className="text-sm text-slate-300">{contactData.phone1}</p>
+                    <p className="text-sm text-slate-300">{contactData.phone2}</p>
                   </div>
                 </div>
               </div>

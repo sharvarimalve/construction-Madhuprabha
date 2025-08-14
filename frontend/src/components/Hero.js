@@ -46,7 +46,7 @@ const Hero = () => {
               <img
                 src={slide.image}
                 alt={slide.title}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-fill"
               />
             </div>
 
@@ -123,41 +123,7 @@ const Hero = () => {
           />
         </svg>
         
-        <div className="absolute inset-0 flex items-center">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="text-center text-white group">
-                <div className="flex items-center justify-center space-x-3 mb-3">
-                  <div className="w-12 h-12 bg-gradient-to-r from-amber-400 to-yellow-500 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <Award className="w-6 h-6 text-slate-900" />
-                  </div>
-                  <span className="text-4xl font-bold bg-gradient-to-r from-amber-300 to-yellow-400 bg-clip-text text-transparent">15+</span>
-                </div>
-                <p className="text-slate-300 font-medium">Years Experience</p>
-              </div>
-              
-              <div className="text-center text-white group">
-                <div className="flex items-center justify-center space-x-3 mb-3">
-                  <div className="w-12 h-12 bg-gradient-to-r from-amber-400 to-yellow-500 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <Building2 className="w-6 h-6 text-slate-900" />
-                  </div>
-                  <span className="text-4xl font-bold bg-gradient-to-r from-amber-300 to-yellow-400 bg-clip-text text-transparent">500+</span>
-                </div>
-                <p className="text-slate-300 font-medium">Projects Completed</p>
-              </div>
-              
-              <div className="text-center text-white group">
-                <div className="flex items-center justify-center space-x-3 mb-3">
-                  <div className="w-12 h-12 bg-gradient-to-r from-amber-400 to-yellow-500 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <Users className="w-6 h-6 text-slate-900" />
-                  </div>
-                  <span className="text-4xl font-bold bg-gradient-to-r from-amber-300 to-yellow-400 bg-clip-text text-transparent">450+</span>
-                </div>
-                <p className="text-slate-300 font-medium">Happy Clients</p>
-              </div>
-            </div>
-          </div>
-        </div>
+       
       </div>
     </section>
   );

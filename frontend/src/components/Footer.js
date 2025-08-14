@@ -87,21 +87,20 @@ const Footer = () => {
                   <div className="absolute -inset-3 bg-gradient-to-r from-amber-400 to-yellow-500 rounded-2xl blur opacity-30 group-hover:opacity-60 transition-opacity duration-500 animate-pulse"></div>
                   
                   {/* Logo container */}
-                  <div className="relative w-16 h-16 bg-gradient-to-br from-slate-800 via-slate-700 to-slate-600 rounded-2xl flex items-center justify-center transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 border border-slate-500/30 shadow-2xl">
-                    <Building className="w-8 h-8 text-amber-400 group-hover:text-yellow-300 transition-colors duration-300" />
-                  </div>
+                  <div className="relative w-50 h-10 rounded-lg overflow-hidden transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-lg">
+                  <img 
+                    src="/images/Madhuprabhalogo.jpg" 
+                    alt="Madhuprabha Construction Logo" 
+                    className="w-full h-full object-fill"
+                  />
+                </div>
                 </div>
                 
-                <div>
-                  <h3 className="text-3xl font-bold bg-gradient-to-r from-amber-300 via-yellow-400 to-orange-400 bg-clip-text text-transparent group-hover:from-yellow-300 group-hover:to-amber-500 transition-all duration-300">
-                    Madhuprabha
-                  </h3>
-                  <p className="text-sm text-slate-400 group-hover:text-amber-200 transition-colors duration-300">Construction</p>
-                </div>
+                
               </Link>
               
               <p className="text-slate-300 leading-relaxed">
-                Building dreams into reality with 15+ years of experience in premium residential construction. 
+                Building dreams into reality with 20+ years of experience in premium residential construction. 
                 Quality craftsmanship and customer satisfaction is our priority.
               </p>
               
@@ -184,7 +183,7 @@ const Footer = () => {
                 
                 <div className="group flex items-center space-x-4 p-4 rounded-xl bg-slate-800/30 hover:bg-slate-700/30 transition-colors duration-300">
                   <Phone className="w-6 h-6 text-amber-400 flex-shrink-0 group-hover:scale-110 transition-transform duration-300" />
-                  <p className="text-slate-300 group-hover:text-slate-200 transition-colors duration-300">{contactData.phone}</p>
+                  <p className="text-slate-300 group-hover:text-slate-200 transition-colors duration-300">{contactData.phone1}</p>
                 </div>
                 
                 <div className="group flex items-center space-x-4 p-4 rounded-xl bg-slate-800/30 hover:bg-slate-700/30 transition-colors duration-300">
@@ -236,11 +235,11 @@ const Footer = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
               <div className="flex flex-col sm:flex-row justify-between items-center w-full space-y-4 sm:space-y-0">
                 <p className="text-slate-400 text-sm">
-                  © 2024 Muze Madhuprabha Construction. All rights reserved.
+                  © 2025 Madhuprabha Construction. All rights reserved.
                 </p>
                 <div className="flex items-center space-x-6 text-sm text-slate-400">
-                  <a href="#" className="hover:text-amber-400 transition-colors duration-300">Privacy Policy</a>
-                  <a href="#" className="hover:text-amber-400 transition-colors duration-300">Terms of Service</a>
+                  <a href="https://www.rsinfotechsys.com/" className="hover:text-amber-400 transition-colors duration-300"> © Copyright RIGHT SERVE INFOTECH SYSTEMS PVT. LTD. 2022</a>
+                  <a href="#" className="hover:text-amber-400 transition-colors duration-300"></a>
                 </div>
               </div>
             </div>

@@ -3,18 +3,14 @@
 export const projectsData = [
   {
     id: 1,
-    title: "Luxury Villa - Bandra West",
-    location: "Mumbai, Maharashtra",
-    area: "3500 sq ft",
-    type: "Residential Villa",
+    title: "Prajakta Classic",
+    location: "Abhyankar Nagar, Nagpur",
+    area: "3BHK",
+    type: "Residential",
     status: "Completed",
-    image: "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=500&h=350&fit=crop",
-    completionDate: "March 2024",
-    startDate: "January 2023",
-    budget: "₹2.5 Crores",
-    client: "Mr. Rajesh Kumar",
-    architect: "Priya Designs Studio",
-    description: "Modern luxury villa with contemporary architecture and premium finishes.",
+    image: "https://madhuprabhaconstructions.in/images/prajktaclassic.png",
+    completionDate: "2023",
+    description: "Premium residential project with modern amenities.",
     fullDescription: "This stunning luxury villa represents the pinnacle of contemporary residential design. Spanning 3500 sq ft, the property features an open-plan living concept with floor-to-ceiling windows that flood the interiors with natural light. The villa includes 4 spacious bedrooms, 3 full bathrooms, a modern kitchen with island, and a private garden with swimming pool. High-end finishes throughout include Italian marble flooring, custom millwork, and smart home automation systems. The project was completed on time and within budget, earning exceptional client satisfaction.",
     features: [
       "4 Bedrooms with en-suite bathrooms",
@@ -37,12 +33,12 @@ export const projectsData = [
   },
   {
     id: 2,
-    title: "Premium Apartments - Andheri",
-    location: "Andheri East, Mumbai",
-    area: "1800-2400 sq ft",
-    type: "Residential Apartments", 
+    title: "PRAJAKTA PINNACLE",
+    location: "Telecom Nagar, Nagpur",
+    area: "3BHK",
+    type: "Residential",
     status: "Completed",
-    image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=500&h=350&fit=crop",
+    image: "https://madhuprabhaconstructions.in/images/PRAJAKTA-PINNACLE-TELECOM-NAGAR.jpg",
     completionDate: "January 2024",
     startDate: "March 2022",
     budget: "₹15 Crores",
@@ -69,12 +65,12 @@ export const projectsData = [
   },
   {
     id: 3,
-    title: "Duplex Home - Thane",
-    location: "Thane West, Mumbai",
-    area: "2800 sq ft",
-    type: "Duplex Villa",
-    status: "Completed", 
-    image: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=500&h=350&fit=crop",
+    title: "Prajakta Green Serenity",
+    location: "Madhav Nagar, Nagpur",
+    area: "3BHK",
+    type: "Residential",
+    status: "Completed",
+    image: "https://madhuprabhaconstructions.in/images/portfolio3.png",
     completionDate: "December 2023",
     startDate: "August 2022",
     budget: "₹1.8 Crores",
@@ -98,111 +94,20 @@ export const projectsData = [
       "https://images.unsplash.com/photo-1448630360428-65456885c650?w=800&h=600&fit=crop"
     ]
   },
-  {
-    id: 4,
-    title: "Row Houses - Powai",
-    location: "Powai, Mumbai",
-    area: "2200 sq ft each",
-    type: "Row Houses",
-    status: "Completed",
-    image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=500&h=350&fit=crop",
-    completionDate: "September 2023",
-    startDate: "January 2022",
-    budget: "₹8 Crores (4 units)",
-    client: "Green Valley Developers",
-    architect: "Sustainable Design Studio",
-    description: "Modern row houses with contemporary design and premium amenities.",
-    fullDescription: "A collection of 4 contemporary row houses designed for modern families seeking privacy and community living. Each 2200 sq ft unit features sustainable design elements, energy-efficient systems, and premium finishes. The development includes shared amenities like a children's play area and landscaped common spaces.",
-    features: [
-      "4 individual row house units",
-      "3 bedrooms per unit",
-      "Private front and back yards",
-      "Solar panel installation",
-      "Rainwater harvesting system",
-      "Common children's play area",
-      "Individual car parking",
-      "Energy-efficient appliances"
-    ],
-    gallery: [
-      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&h=600&fit=crop"
-    ]
-  },
-  {
-    id: 5,
-    title: "Family Home - Malad",
-    location: "Malad West, Mumbai", 
-    area: "1900 sq ft",
-    type: "Independent House",
-    status: "Completed",
-    image: "https://images.unsplash.com/photo-1448630360428-65456885c650?w=500&h=350&fit=crop",
-    completionDate: "August 2023",
-    startDate: "December 2021",
-    budget: "₹1.2 Crores",
-    client: "Mr. Amit Patel",
-    architect: "Family Homes Design",
-    description: "Comfortable family home with traditional and modern elements.",
-    fullDescription: "This charming family home blends traditional Indian architecture with modern amenities across 1900 sq ft. The design emphasizes natural ventilation and light while providing comfortable spaces for family living. Features include a central courtyard, modern kitchen, and flexible spaces that adapt to family needs.",
-    features: [
-      "3 bedrooms with attached bathrooms",
-      "Central courtyard for natural light",
-      "Traditional jali work details",
-      "Modern modular kitchen",
-      "Flexible multipurpose room",
-      "Covered parking space",
-      "Traditional tile flooring",
-      "Energy-efficient windows"
-    ],
-    gallery: [
-      "https://images.unsplash.com/photo-1448630360428-65456885c650?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=800&h=600&fit=crop"
-    ]
-  },
-  {
-    id: 6,
-    title: "Penthouse - Versova",
-    location: "Versova, Mumbai",
-    area: "4200 sq ft",
-    type: "Penthouse",
-    status: "Completed",
-    image: "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=500&h=350&fit=crop",
-    completionDate: "June 2023",
-    startDate: "September 2021",
-    budget: "₹3.5 Crores",
-    client: "Mr. Vikram Singh",
-    architect: "Luxury Living Architects",
-    description: "Luxury penthouse with panoramic city views and rooftop terrace.",
-    fullDescription: "This magnificent penthouse offers the ultimate in luxury living with 4200 sq ft of exquisitely designed space and panoramic city views. The residence features a spacious rooftop terrace, premium imported finishes, and state-of-the-art home automation. Every detail has been carefully crafted to create an unparalleled living experience.",
-    features: [
-      "4 bedrooms with city views",
-      "Spacious rooftop terrace",
-      "Premium imported finishes",
-      "Home automation system",
-      "Private elevator access",
-      "Jacuzzi and outdoor kitchen",
-      "Floor-to-ceiling windows",
-      "2-car tandem parking"
-    ],
-    gallery: [
-      "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&h=600&fit=crop"
-    ]
-  }
+
+  
 ];
 
 export const currentProjectsData = [
   {
     id: 7,
-    title: "Luxury Towers - Borivali",
-    location: "Borivali West, Mumbai",
-    area: "2500-3500 sq ft",
-    type: "High-rise Apartments",
+    title: "3BHK Luxurious Prajakta Park",
+    location: "Abhyankar Nagar, Nagpur",
+    area: "3BHK",
+    type: "Residential",
     status: "In Progress",
-    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=500&h=350&fit=crop",
+    image: "https://madhuprabhaconstructions.in/images/building.jfif",
+    description: "A 5 level 3BHK luxurious park view apartment located in the lap of nature. A peaceful location in the heart of the city where you can enjoy your mornings with blissful greenery. A Perfect Home with Modern Amenities at Abhyankar Nagar, Nagpur.",
     expectedCompletion: "December 2024",
     startDate: "February 2023",
     progress: "75%",
@@ -230,12 +135,13 @@ export const currentProjectsData = [
   },
   {
     id: 8,
-    title: "Green Villas - Lonavala",
-    location: "Lonavala, Maharashtra",
-    area: "4000 sq ft each",
-    type: "Resort Villas",
-    status: "In Progress", 
-    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=500&h=350&fit=crop",
+    title: "3BHK Luxurious Prajakta La-Masion",
+    location: "Nagpur",
+    area: "3BHK",
+    type: "Residential",
+    status: "In Progress",
+    image: "https://madhuprabhaconstructions.in/images/secondProject.jpg",
+    description: "A 7 level 3BHK luxurious view apartment located in the lap of nature. A peaceful location in the heart of the city where you can enjoy your mornings with blissful greenery. A Perfect Home with Modern Amenities at Nagpur.",
     expectedCompletion: "March 2025",
     startDate: "June 2023",
     progress: "45%",
@@ -260,55 +166,18 @@ export const currentProjectsData = [
       "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=800&h=600&fit=crop"
     ]
   },
-  {
-    id: 9,
-    title: "Smart Homes - Navi Mumbai",
-    location: "Navi Mumbai, Maharashtra",
-    area: "2800 sq ft each",
-    type: "Smart Homes",
-    status: "In Progress",
-    image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=500&h=350&fit=crop",
-    expectedCompletion: "August 2024",
-    startDate: "November 2022",
-    progress: "85%",
-    budget: "₹18 Crores (8 homes)",
-    client: "Future Living Developers",
-    architect: "Tech Home Designs",
-    description: "8 smart homes with AI integration and automated systems.",
-    fullDescription: "Nearly completed project featuring 8 state-of-the-art smart homes with full AI integration and home automation. Each home includes voice control, automated lighting, climate control, and security systems. The development represents the future of residential living.",
-    features: [
-      "8 fully automated smart homes",
-      "AI-powered home management",
-      "Voice control integration",
-      "Automated lighting and climate",
-      "Smart security systems",
-      "Energy monitoring systems",
-      "EV charging infrastructure",
-      "High-speed fiber connectivity"
-    ],
-    gallery: [
-      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=800&h=600&fit=crop"
-    ]
-  }
+  
 ];
 
 export const carouselData = [
   {
-    id: 1,
-    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1400&h=800&fit=crop",
-    title: "Building Dreams Into Reality",
-    subtitle: "Premium Residential Construction Services",
-    description: "Creating exceptional homes with quality craftsmanship and modern design"
-  },
-  {
-    id: 2,
-    image: "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=1400&h=800&fit=crop",
-    title: "Quality Construction Excellence", 
-    subtitle: "Trusted by 500+ Families",
-    description: "Transform your vision into beautiful, lasting residential spaces"
-  },
+      image: '/images/certification.jpeg',
+
+    },
+    {
+      image: '/images/carazol5.JPG',
+
+    },
   {
     id: 3,
     image: "https://images.unsplash.com/photo-1448630360428-65456885c650?w=1400&h=800&fit=crop",
@@ -321,50 +190,63 @@ export const carouselData = [
 export const galleryImages = [
   {
     id: 1,
-    url: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&h=600&fit=crop",
-    title: "Modern Architecture",
+    url: "https://madhuprabhaconstructions.in/images/madhuprabha.png",
+    title: "Madhu Prabha Construction",
     category: "image"
   },
   {
     id: 2,
-    url: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&h=600&fit=crop",
-    title: "Residential Complex",
+    url: "https://madhuprabhaconstructions.in/images/certification.jpeg",
+    title: "Certification",
     category: "image"
   },
-  {
-    id: 3,
-    url: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&h=600&fit=crop",
-    title: "Luxury Villa",
-    category: "image"
-  },
+
   {
     id: 4,
-    url: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&h=600&fit=crop",
-    title: "Contemporary Home",
+    url: "https://madhuprabhaconstructions.in/images/carazol5.JPG",
+    title: "Project View",
     category: "image"
   },
   {
     id: 5,
-    url: "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=800&h=600&fit=crop",
-    title: "Family House",
+    url: "https://madhuprabhaconstructions.in/images/all%20member%20.JPG",
+    title: "Team Members",
     category: "image"
   },
   {
     id: 6,
-    url: "https://images.unsplash.com/photo-1448630360428-65456885c650?w=800&h=600&fit=crop",
-    title: "Urban Living",
+    url: "https://madhuprabhaconstructions.in/images/Prajktaproject.JPG",
+    title: "Prajakta Project",
     category: "image"
   },
   {
     id: 7,
-    url: "https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?w=800&h=600&fit=crop",
-    title: "Construction Progress",
+    url: "https://madhuprabhaconstructions.in/images/carazol6.JPG",
+    title: "Project View",
     category: "image"
   },
   {
     id: 8,
-    url: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&h=600&fit=crop",
-    title: "Building Foundation",
+    url: "https://madhuprabhaconstructions.in/images/prajktaclassic.png",
+    title: "Prajakta Classic",
+    category: "image"
+  },
+  {
+    id: 9,
+    url: "https://madhuprabhaconstructions.in/images/PRAJAKTA-PINNACLE-TELECOM-NAGAR.jpg",
+    title: "Prajakta Pinnacle",
+    category: "image"
+  },
+  {
+    id: 10,
+    url: "https://madhuprabhaconstructions.in/images/portfolio3.png",
+    title: "Prajakta Green Serenity",
+    category: "image"
+  },
+  {
+    id: 11,
+    url: "https://madhuprabhaconstructions.in/images/portfolio4.jpeg",
+    title: "Greenfinity View Apartment",
     category: "image"
   }
 ];
@@ -428,22 +310,21 @@ export const testimonials = [
 ];
 
 export const aboutUsData = {
-  title: "About Muze Madhuprabha Construction",
-  shortDescription: "Leading residential construction company in Mumbai with over 15 years of experience in creating quality homes.",
-  fullDescription: `Muze Madhuprabha Construction has been a trusted name in residential construction for over 15 years. We specialize in creating exceptional homes that blend modern design with traditional craftsmanship.
-
-Our commitment to quality, innovation, and customer satisfaction has made us the preferred choice for families across Mumbai. From luxury villas to affordable housing, we bring dreams to life with precision and care.
-
-With a team of experienced architects, engineers, and craftsmen, we ensure every project meets the highest standards of quality and excellence. Our portfolio includes over 500 completed residential projects, each reflecting our dedication to superior construction.`,
-  experience: "15+ Years",
-  projectsCompleted: "500+",
-  happyClients: "450+",
-  location: "Mumbai, Maharashtra"
+  title: "About Madhu Prabha Construction",
+  shortDescription: "Leading residential construction company with 20 Glorious Years of experience in creating quality homes.",
+  fullDescription: `With 20 Glorious Year of Creativity in the construction industry, Madhu Prabha Construction a unit of Ashish Construction has been a trusted name in delivering quality construction services. We specialize in residential, commercial, and industrial projects.`,
+  experience: "20 Glorious Years",
+  projectsCompleted: "200+",
+  happyClients: "150+",
+  awards: "25+",
+  location: "Nagpur, Maharashtra",
+  image: "https://madhuprabhaconstructions.in/images/about.jpg"
 };
 
 export const contactData = {
-  address: "Office No. 12, Madhuprabha Heights, Andheri West, Mumbai - 400058",
-  phone: "+91 98765 43210",
-  email: "info@madhuprabha.construction",
-  workingHours: "Monday to Saturday: 9:00 AM - 6:00 PM"
+  address: "UMA Apartment, Behind Binzani Book Depot, Tilak Road, Mahal, Nagpur-2",
+  phone1: "+91 98224 74211",
+  phone2: "+91 95229 01659",
+  email: "info@madhuprabhaconstructions.in",
+  googleMapsUrl: "https://www.google.com/maps/place/UMA+Apartment,+Tilak+Road,+Mahal,+Nagpur"
 };

@@ -120,7 +120,7 @@ const AboutSection = () => {
               {/* Main Image with curved frame */}
               <div className="relative overflow-hidden rounded-3xl shadow-2xl transform hover:scale-105 transition-transform duration-700">
                 <img
-                  src="https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?w=600&h=450&fit=crop"
+                  src={aboutUsData.image}
                   alt="Construction Excellence"
                   className="w-full h-96 object-cover"
                 />

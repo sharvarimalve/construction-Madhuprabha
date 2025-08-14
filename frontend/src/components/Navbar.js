@@ -95,18 +95,17 @@ const Navbar = () => {
                 {/* Animated background */}
                 <div className="absolute -inset-2 bg-gradient-to-r from-amber-400 via-orange-500 to-yellow-600 rounded-2xl blur opacity-30 group-hover:opacity-60 transition-opacity duration-500 animate-pulse"></div>
                 
-                {/* Logo container with glassmorphism */}
-                <div className="relative w-14 h-14 bg-gradient-to-br from-slate-800/80 via-slate-700/80 to-slate-600/80 backdrop-blur-xl rounded-2xl flex items-center justify-center transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 border border-white/20 shadow-2xl">
-                  <Building className="w-7 h-7 text-amber-400 group-hover:text-yellow-300 transition-colors duration-300" />
+                {/* Logo container with image */}
+                <div className="relative w-50 h-10 rounded-lg overflow-hidden transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-lg">
+                  <img 
+                    src="/images/Madhuprabhalogo.jpg" 
+                    alt="Madhuprabha Construction Logo" 
+                    className="w-full h-full object-fill"
+                  />
                 </div>
               </div>
               
-              <div className="hidden sm:block">
-                <h1 className="text-2xl font-bold bg-gradient-to-r from-amber-300 via-yellow-400 to-orange-400 bg-clip-text text-transparent group-hover:from-yellow-300 group-hover:to-amber-500 transition-all duration-300">
-                  Madhuprabha
-                </h1>
-                <p className="text-xs text-slate-300 -mt-1 group-hover:text-amber-200 transition-colors duration-300">Construction</p>
-              </div>
+             
             </Link>
 
             {/* Desktop Navigation */}
@@ -154,16 +153,16 @@ const Navbar = () => {
             <div className="hidden md:block relative z-10">
               <Link
                 to="/contact"
-                className="group relative px-8 py-3 font-semibold rounded-full overflow-hidden transition-all duration-500 transform hover:scale-105"
+                className="group relative px-8 py-3 font-semibold rounded-[50px] overflow-hidden transition-all duration-500 transform hover:scale-105"
               >
                 {/* Animated gradient background */}
-                <div className="absolute inset-0 bg-gradient-to-r from-amber-500 via-orange-500 to-yellow-600 transition-all duration-500 group-hover:from-yellow-500 group-hover:via-amber-500 group-hover:to-orange-600"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-amber-500 via-orange-500 to-yellow-600 rounded-[50px] transition-all duration-500 group-hover:from-yellow-500 group-hover:via-amber-500 group-hover:to-orange-600"></div>
                 
                 {/* Shimmer effect */}
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent rounded-[50px] skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
                 
                 {/* Glow effect */}
-                <div className="absolute -inset-1 bg-gradient-to-r from-amber-400 to-yellow-500 rounded-full blur opacity-30 group-hover:opacity-60 transition-opacity duration-500"></div>
+                <div className="absolute -inset-1 bg-gradient-to-r from-amber-400 to-yellow-500 rounded-[50px] blur opacity-30 group-hover:opacity-60 transition-opacity duration-500"></div>
                 
                 <span className="relative z-10 text-slate-900 font-bold group-hover:text-white transition-colors duration-300">Get Quote</span>
               </Link>
@@ -218,7 +217,7 @@ const Navbar = () => {
                 <Link
                   to="/contact"
                   onClick={() => setIsOpen(false)}
-                  className="group block w-full py-4 bg-gradient-to-r from-amber-500 to-yellow-600 text-slate-900 text-center font-bold rounded-2xl hover:from-yellow-500 hover:to-amber-600 transition-all duration-300 shadow-xl transform hover:scale-105"
+                  className="group block w-full py-4 bg-gradient-to-r from-amber-500 to-yellow-600 text-slate-900 text-center font-bold rounded-[50px] hover:from-yellow-500 hover:to-amber-600 transition-all duration-300 shadow-xl transform hover:scale-105"
                 >
                   <span className="relative z-10">Get Quote</span>
                 </Link>

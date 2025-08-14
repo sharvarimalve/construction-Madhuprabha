@@ -17,17 +17,14 @@ const FeaturedProjects = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-20">
-          <div className="inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-amber-100/80 to-yellow-100/80 backdrop-blur-sm border border-amber-200/50 rounded-full mb-8 shadow-lg">
-            <Sparkles className="w-5 h-5 text-amber-600 animate-pulse" />
-            <span className="text-slate-700 font-bold text-sm uppercase tracking-wider">Our Portfolio</span>
-          </div>
+          
           
           <h2 className="text-5xl md:text-7xl font-bold text-slate-900 mb-8 leading-tight">
             <span className="bg-gradient-to-r from-amber-600 via-yellow-600 to-orange-600 bg-clip-text text-transparent">
-              Completed
+              Completed  Projects
             </span>
             <br />
-            <span className="text-slate-800">Projects</span>
+            {/* <span className="text-slate-800">Projects</span> */}
           </h2>
           
           <p className="text-xl text-slate-600 max-w-4xl mx-auto leading-relaxed">

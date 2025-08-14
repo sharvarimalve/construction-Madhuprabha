@@ -5,7 +5,7 @@ import Footer from '../components/Footer';
 
 const AboutPage = () => {
   const achievements = [
-    { icon: Award, number: "15+", label: "Years Experience", color: "from-orange-500 to-red-600" },
+    { icon: Award, number: "20+", label: "Years Experience", color: "from-orange-500 to-red-600" },
     { icon: Building2, number: "500+", label: "Projects Completed", color: "from-blue-500 to-blue-600" },
     { icon: Users, number: "450+", label: "Happy Clients", color: "from-green-500 to-green-600" },
     { icon: TrendingUp, number: "100%", label: "Success Rate", color: "from-purple-500 to-purple-600" }
@@ -138,7 +138,7 @@ const AboutPage = () => {
               {/* Floating Badge */}
               <div className="absolute -top-6 -right-6 bg-gradient-to-r from-orange-500 to-red-600 text-white p-6 rounded-2xl shadow-xl">
                 <div className="text-center">
-                  <div className="text-2xl font-bold">15+</div>
+                  <div className="text-2xl font-bold">20+</div>
                   <div className="text-sm opacity-90">Years</div>
                 </div>
               </div>
