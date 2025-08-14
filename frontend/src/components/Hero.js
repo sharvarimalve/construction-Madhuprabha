@@ -22,7 +22,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative h-screen overflow-hidden pt-24">
+    <section className="relative h-[45vh] sm:h-[65vh] md:h-[75vh] lg:h-screen overflow-hidden pt-12 sm:pt-16 lg:pt-24">
       {/* Animated Background Pattern */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-700"></div>
@@ -46,7 +46,8 @@ const Hero = () => {
               <img
                 src={slide.image}
                 alt={slide.title}
-                className="w-full h-full object-fill"
+                className="w-full h-full object-cover lg:object-fill"
+                loading={index === 0 ? "eager" : "lazy"}
               />
             </div>
 
@@ -56,9 +57,10 @@ const Hero = () => {
       </div>
 
       {/* Advanced Navigation Arrows */}
+      {/* Navigation Arrows - Hidden on mobile and tablet, visible on desktop */}
       <button
         onClick={prevSlide}
-        className="absolute left-8 top-1/2 -translate-y-1/2 z-30 group p-4 bg-gradient-to-r from-slate-800/50 to-slate-700/50 backdrop-blur-sm border border-slate-600/30 text-slate-200 rounded-full hover:from-amber-500/20 hover:to-yellow-500/20 hover:border-amber-400/50 hover:text-amber-300 transform hover:scale-110 transition-all duration-500"
+        className="hidden lg:block absolute left-8 top-1/2 -translate-y-1/2 z-30 group p-4 bg-gradient-to-r from-slate-800/50 to-slate-700/50 backdrop-blur-sm border border-slate-600/30 text-slate-200 rounded-full hover:from-amber-500/20 hover:to-yellow-500/20 hover:border-amber-400/50 hover:text-amber-300 transform hover:scale-110 transition-all duration-500"
       >
         <ChevronLeft className="w-8 h-8" />
         <div className="absolute inset-0 bg-gradient-to-r from-amber-400/20 to-yellow-500/20 rounded-full blur opacity-0 group-hover:opacity-60 transition-opacity duration-500"></div>
@@ -66,7 +68,7 @@ const Hero = () => {
       
       <button
         onClick={nextSlide}
-        className="absolute right-8 top-1/2 -translate-y-1/2 z-30 group p-4 bg-gradient-to-r from-slate-800/50 to-slate-700/50 backdrop-blur-sm border border-slate-600/30 text-slate-200 rounded-full hover:from-amber-500/20 hover:to-yellow-500/20 hover:border-amber-400/50 hover:text-amber-300 transform hover:scale-110 transition-all duration-500"
+        className="hidden lg:block absolute right-8 top-1/2 -translate-y-1/2 z-30 group p-4 bg-gradient-to-r from-slate-800/50 to-slate-700/50 backdrop-blur-sm border border-slate-600/30 text-slate-200 rounded-full hover:from-amber-500/20 hover:to-yellow-500/20 hover:border-amber-400/50 hover:text-amber-300 transform hover:scale-110 transition-all duration-500"
       >
         <ChevronRight className="w-8 h-8" />
         <div className="absolute inset-0 bg-gradient-to-r from-amber-400/20 to-yellow-500/20 rounded-full blur opacity-0 group-hover:opacity-60 transition-opacity duration-500"></div>
@@ -98,7 +100,7 @@ const Hero = () => {
       {/* Advanced Stats Bar with Curves */}
       <div className="absolute bottom-0 left-0 right-0 z-20">
         <svg
-          className="w-full h-24"
+          className="w-full h-12 sm:h-16 lg:h-24"
           viewBox="0 0 1200 100"
           preserveAspectRatio="none"
         >

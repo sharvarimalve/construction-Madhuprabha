@@ -122,7 +122,7 @@ const AboutSection = () => {
                 <img
                   src={aboutUsData.image}
                   alt="Construction Excellence"
-                  className="w-full h-96 object-cover"
+                  className="w-full h-96 object-fill"
                 />
                 
                 {/* Curved overlay */}

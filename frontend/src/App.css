@@ -1,34 +1,158 @@
-.App-logo {
-    height: 40vmin;
-    pointer-events: none;
+/* Base responsive container */
+.container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
+/* Responsive container breakpoints */
+@media (min-width: 640px) {
+    .container {
+        max-width: 640px;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
     }
 }
 
-.App-header {
-    background-color: #0f0f10;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+@media (min-width: 768px) {
+    .container {
+        max-width: 768px;
+    }
 }
 
-.App-link {
-    color: #61dafb;
+@media (min-width: 1024px) {
+    .container {
+        max-width: 1024px;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
 }
 
-@keyframes App-logo-spin {
+@media (min-width: 1280px) {
+    .container {
+        max-width: 1280px;
+    }
+}
+
+/* Responsive text sizes */
+.text-responsive {
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+}
+
+.heading-responsive {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+.subheading-responsive {
+    font-size: clamp(1.25rem, 3vw, 1.75rem);
+}
+
+/* Responsive spacing */
+.section-padding {
+    padding-top: clamp(2rem, 5vw, 6rem);
+    padding-bottom: clamp(2rem, 5vw, 6rem);
+}
+
+.section-margin {
+    margin-top: clamp(2rem, 5vw, 6rem);
+    margin-bottom: clamp(2rem, 5vw, 6rem);
+}
+
+/* Responsive grid */
+.responsive-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+    gap: clamp(1rem, 3vw, 2rem);
+}
+
+/* Responsive images */
+.responsive-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Responsive buttons */
+.responsive-button {
+    padding: clamp(0.5rem, 2vw, 1rem) clamp(1rem, 4vw, 2rem);
+    font-size: clamp(0.875rem, 2vw, 1rem);
+}
+
+/* Utility classes for responsive margins and paddings */
+.mx-responsive {
+    margin-left: clamp(1rem, 3vw, 2rem);
+    margin-right: clamp(1rem, 3vw, 2rem);
+}
+
+.my-responsive {
+    margin-top: clamp(1rem, 3vw, 2rem);
+    margin-bottom: clamp(1rem, 3vw, 2rem);
+}
+
+.px-responsive {
+    padding-left: clamp(1rem, 3vw, 2rem);
+    padding-right: clamp(1rem, 3vw, 2rem);
+}
+
+.py-responsive {
+    padding-top: clamp(1rem, 3vw, 2rem);
+    padding-bottom: clamp(1rem, 3vw, 2rem);
+}
+
+/* Animation keyframes */
+@keyframes fadeIn {
     from {
-        transform: rotate(0deg);
+        opacity: 0;
+        transform: translateY(20px);
     }
     to {
-        transform: rotate(360deg);
+        opacity: 1;
+        transform: translateY(0);
     }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* Responsive cards */
+.card-responsive {
+    padding: clamp(1rem, 3vw, 2rem);
+    border-radius: clamp(0.5rem, 2vw, 1rem);
+}
+
+/* Base styles */
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.5;
+}
+
+/* Focus styles */
+:focus {
+    outline: 2px solid #f59e0b;
+    outline-offset: 2px;
+}
+
+/* Scrollbar styles */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1f2937;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #4b5563;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #6b7280;
 }

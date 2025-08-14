@@ -34,9 +34,7 @@ const ProjectsPage = () => {
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-orange-500/20 to-red-600/20 backdrop-blur-sm border border-orange-500/30 rounded-full mb-6">
-            <span className="text-orange-400 font-semibold text-sm uppercase tracking-wider">Our Portfolio</span>
-          </div>
+        
           <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-6">
             <span className="bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">
               Completed

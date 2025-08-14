@@ -103,18 +103,11 @@ export const currentProjectsData = [
     id: 7,
     title: "3BHK Luxurious Prajakta Park",
     location: "Abhyankar Nagar, Nagpur",
-    area: "3BHK",
     type: "Residential",
     status: "In Progress",
     image: "https://madhuprabhaconstructions.in/images/building.jfif",
     description: "A 5 level 3BHK luxurious park view apartment located in the lap of nature. A peaceful location in the heart of the city where you can enjoy your mornings with blissful greenery. A Perfect Home with Modern Amenities at Abhyankar Nagar, Nagpur.",
-    expectedCompletion: "December 2024",
-    startDate: "February 2023",
-    progress: "75%",
-    budget: "₹25 Crores",
-    client: "Metro Developers",
-    architect: "Sky High Designs",
-    description: "40-unit luxury apartment complex with premium amenities and sky lounge.",
+    
     fullDescription: "Currently under construction, this prestigious 15-floor luxury apartment complex will feature 40 premium units with breathtaking city views. The project includes a sky lounge, infinity pool, fitness center, and landscaped gardens. Each apartment is designed with premium finishes and smart home features.",
     features: [
       "40 luxury apartments (2-4 BHK)",
@@ -136,20 +129,11 @@ export const currentProjectsData = [
   {
     id: 8,
     title: "3BHK Luxurious Prajakta La-Masion",
-    location: "Nagpur",
-    area: "3BHK",
+    location: "Nagpur", 
     type: "Residential",
     status: "In Progress",
     image: "https://madhuprabhaconstructions.in/images/secondProject.jpg",
     description: "A 7 level 3BHK luxurious view apartment located in the lap of nature. A peaceful location in the heart of the city where you can enjoy your mornings with blissful greenery. A Perfect Home with Modern Amenities at Nagpur.",
-    expectedCompletion: "March 2025",
-    startDate: "June 2023",
-    progress: "45%",
-    budget: "₹12 Crores (6 villas)",
-    client: "Nature Retreats Pvt Ltd",
-    architect: "Eco Design Collective",
-    description: "Eco-friendly resort villas with sustainable design and natural materials.",
-    fullDescription: "Six luxury eco-villas currently under construction in the scenic hills of Lonavala. Each 4000 sq ft villa is designed with sustainable materials and energy-efficient systems. The project emphasizes harmony with nature while providing modern luxury amenities.",
     features: [
       "6 individual eco-villas",
       "4 bedrooms with valley views",
@@ -179,12 +163,16 @@ export const carouselData = [
 
     },
   {
-    id: 3,
-    image: "https://images.unsplash.com/photo-1448630360428-65456885c650?w=1400&h=800&fit=crop",
-    title: "Modern Living Solutions",
-    subtitle: "Innovative Residential Designs",
-    description: "Contemporary homes designed for modern lifestyle and comfort"
-  }
+
+    image: "/images/vikashsir.jpeg",
+   
+  },
+    {
+
+    image: "/images/secondProject.jpg",
+   
+  },
+
 ];
 
 export const galleryImages = [

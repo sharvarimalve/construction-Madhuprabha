@@ -1,17 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, MapPin, Home, Calendar, ExternalLink, Sparkles } from 'lucide-react';
-import { projectsData } from '../mockData';
+import { ArrowRight, MapPin, Home, Calendar, ExternalLink } from 'lucide-react';
+import { currentProjectsData } from '../mockData';
 
 const FeaturedProjects = () => {
-  const featuredProjects = projectsData.slice(0, 6);
+  const featuredProjects = currentProjectsData.slice(0, 2);
 
   return (
-    <section className="py-24 bg-gradient-to-b from-slate-50 via-white to-slate-100 relative overflow-hidden">
+    <section className="py-12 sm:py-16 lg:py-24 bg-gradient-to-b from-slate-50 via-white to-slate-100 relative overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0">
-        <div className="absolute top-32 left-20 w-64 h-64 bg-gradient-to-br from-amber-200/20 to-yellow-300/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '0s' }}></div>
-        <div className="absolute bottom-40 right-32 w-48 h-48 bg-gradient-to-br from-orange-200/20 to-amber-300/20 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '3s' }}></div>
+        <div className="absolute top-32 left-8 sm:left-20 w-48 sm:w-64 h-48 sm:h-64 bg-gradient-to-br from-amber-200/20 to-yellow-300/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '0s' }}></div>
+        <div className="absolute bottom-40 right-8 sm:right-32 w-36 sm:w-48 h-36 sm:h-48 bg-gradient-to-br from-orange-200/20 to-amber-300/20 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '3s' }}></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -19,22 +19,20 @@ const FeaturedProjects = () => {
         <div className="text-center mb-20">
           
           
-          <h2 className="text-5xl md:text-7xl font-bold text-slate-900 mb-8 leading-tight">
+          <h2 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-slate-900 mb-4 sm:mb-8 leading-tight">
             <span className="bg-gradient-to-r from-amber-600 via-yellow-600 to-orange-600 bg-clip-text text-transparent">
-              Completed  Projects
+              Current Projects
             </span>
-            <br />
-            {/* <span className="text-slate-800">Projects</span> */}
           </h2>
           
-          <p className="text-xl text-slate-600 max-w-4xl mx-auto leading-relaxed">
-            Discover our finest residential construction projects that showcase quality craftsmanship, 
-            innovative design, and attention to detail.
+          <p className="text-lg sm:text-xl text-slate-600 max-w-4xl mx-auto leading-relaxed px-4">
+            Explore our ongoing residential construction projects that demonstrate our commitment to 
+            excellence, innovation, and meticulous attention to detail.
           </p>
         </div>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16 max-w-5xl mx-auto">
           {featuredProjects.map((project, index) => (
             <div
               key={project.id}
@@ -63,33 +61,34 @@ const FeaturedProjects = () => {
               </div>
 
               {/* Project Image */}
-              <div className="relative h-72 overflow-hidden rounded-t-3xl">
+              <div className="relative h-56 sm:h-64 lg:h-72 overflow-hidden rounded-t-3xl">
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                  className="w-full h-full object-fill group-hover:scale-110 transition-transform duration-700"
+                  loading="lazy"
                 />
                 
                 {/* Gradient overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 
                 {/* Status Badge */}
-                <div className="absolute top-6 right-6">
-                  <div className="px-4 py-2 bg-gradient-to-r from-emerald-500 to-green-600 text-white text-sm font-bold rounded-full shadow-lg backdrop-blur-sm border border-white/20">
+                <div className="absolute top-4 sm:top-6 right-4 sm:right-6">
+                  <div className="px-3 py-1.5 sm:px-4 sm:py-2 bg-gradient-to-r from-emerald-500 to-green-600 text-white text-xs sm:text-sm font-bold rounded-full shadow-lg backdrop-blur-sm border border-white/20">
                     {project.status}
                   </div>
                 </div>
 
                 {/* Hover Overlay */}
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                  <button className="group/btn p-4 bg-white/20 backdrop-blur-sm border border-white/30 text-white rounded-full hover:bg-white/30 transform hover:scale-110 transition-all duration-300 shadow-xl">
-                    <ExternalLink className="w-7 h-7" />
+                  <button className="group/btn p-3 sm:p-4 bg-white/20 backdrop-blur-sm border border-white/30 text-white rounded-full hover:bg-white/30 transform hover:scale-110 transition-all duration-300 shadow-xl">
+                    <ExternalLink className="w-5 h-5 sm:w-7 sm:h-7" />
                   </button>
                 </div>
               </div>
 
               {/* Project Content */}
-              <div className="p-8 relative">
+              <div className="p-4 sm:p-6 lg:p-8 relative">
                 {/* Decorative curve */}
                 <div className="absolute top-0 left-0 right-0 h-2">
                   <svg
@@ -104,36 +103,34 @@ const FeaturedProjects = () => {
                   </svg>
                 </div>
 
-                <h3 className="text-2xl font-bold text-slate-900 mb-4 group-hover:text-amber-600 transition-colors duration-500">
+                <h3 className="text-xl sm:text-2xl font-bold text-slate-900 mb-3 sm:mb-4 group-hover:text-amber-600 transition-colors duration-500 line-clamp-2">
                   {project.title}
                 </h3>
                 
-                <div className="space-y-3 mb-6">
-                  <div className="flex items-center text-slate-600 text-sm">
-                    <div className="w-8 h-8 bg-gradient-to-r from-amber-400 to-yellow-500 rounded-full flex items-center justify-center mr-3">
-                      <MapPin className="w-4 h-4 text-white" />
+                <div className="space-y-2 sm:space-y-3 mb-4 sm:mb-6">
+                  <div className="flex items-center text-slate-600 text-xs sm:text-sm">
+                    <div className="w-6 h-6 sm:w-8 sm:h-8 bg-gradient-to-r from-amber-400 to-yellow-500 rounded-full flex items-center justify-center mr-2 sm:mr-3">
+                      <MapPin className="w-3 h-3 sm:w-4 sm:h-4 text-white" />
                     </div>
-                    <span>{project.location}</span>
+                    <span className="line-clamp-1">{project.location}</span>
                   </div>
-                  <div className="flex items-center text-slate-600 text-sm">
-                    <div className="w-8 h-8 bg-gradient-to-r from-amber-400 to-yellow-500 rounded-full flex items-center justify-center mr-3">
-                      <Home className="w-4 h-4 text-white" />
+                  <div className="flex items-center text-slate-600 text-xs sm:text-sm">
+                    <div className="w-6 h-6 sm:w-8 sm:h-8 bg-gradient-to-r from-amber-400 to-yellow-500 rounded-full flex items-center justify-center mr-2 sm:mr-3">
+                      <Home className="w-3 h-3 sm:w-4 sm:h-4 text-white" />
                     </div>
-                    <span>{project.area} • {project.type}</span>
+                    <span className="line-clamp-1">{project.area} • {project.type}</span>
                   </div>
-                  <div className="flex items-center text-slate-600 text-sm">
-                    <div className="w-8 h-8 bg-gradient-to-r from-amber-400 to-yellow-500 rounded-full flex items-center justify-center mr-3">
-                      <Calendar className="w-4 h-4 text-white" />
-                    </div>
-                    <span>Completed: {project.completionDate}</span>
-                  </div>
+                  
                 </div>
 
-                <p className="text-slate-700 leading-relaxed mb-8">
+                <p className="text-slate-700 text-sm sm:text-base leading-relaxed mb-6 sm:mb-8 line-clamp-3">
                   {project.description}
                 </p>
 
-                <button className="group/btn relative w-full py-4 px-6 font-bold rounded-2xl overflow-hidden transition-all duration-500 transform hover:scale-105">
+                <Link 
+                  to={`/project/${project.id}`}
+                  className="group/btn relative w-full py-3 sm:py-4 px-4 sm:px-6 text-sm sm:text-base font-bold rounded-2xl overflow-hidden transition-all duration-500 transform hover:scale-105 block"
+                >
                   <div className="absolute inset-0 bg-gradient-to-r from-amber-500 via-yellow-500 to-orange-500 transition-all duration-500 group-hover/btn:from-yellow-400 group-hover/btn:via-amber-500 group-hover/btn:to-orange-600"></div>
                   
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12 -translate-x-full group-hover/btn:translate-x-full transition-transform duration-1000"></div>
@@ -142,9 +139,9 @@ const FeaturedProjects = () => {
                   
                   <div className="relative z-10 flex items-center justify-center space-x-2 text-slate-900">
                     <span>View Details</span>
-                    <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-1 transition-transform duration-300" />
+                    <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover/btn:translate-x-1 transition-transform duration-300" />
                   </div>
-                </button>
+                </Link>
               </div>
             </div>
           ))}
@@ -154,7 +151,7 @@ const FeaturedProjects = () => {
         <div className="text-center">
           <Link
             to="/projects"
-            className="group relative inline-flex items-center space-x-4 px-12 py-6 font-bold text-lg rounded-full overflow-hidden transition-all duration-500 transform hover:scale-105"
+            className="group relative inline-flex items-center space-x-2 sm:space-x-4 px-8 sm:px-12 py-4 sm:py-6 font-bold text-base sm:text-lg rounded-full overflow-hidden transition-all duration-500 transform hover:scale-105"
           >
             <div className="absolute inset-0 bg-gradient-to-r from-slate-800 via-slate-700 to-slate-600 transition-all duration-500 group-hover:from-amber-500 group-hover:via-yellow-500 group-hover:to-orange-500"></div>
             
@@ -163,7 +160,7 @@ const FeaturedProjects = () => {
             <div className="absolute -inset-2 bg-gradient-to-r from-slate-600 to-slate-500 group-hover:from-amber-400 group-hover:to-yellow-500 rounded-full blur opacity-30 group-hover:opacity-60 transition-all duration-500"></div>
             
             <span className="relative z-10 text-white group-hover:text-slate-900 transition-colors duration-300">View All Projects</span>
-            <ArrowRight className="relative z-10 w-6 h-6 text-white group-hover:text-slate-900 group-hover:translate-x-2 transition-all duration-300" />
+            <ArrowRight className="relative z-10 w-5 h-5 sm:w-6 sm:h-6 text-white group-hover:text-slate-900 group-hover:translate-x-2 transition-all duration-300" />
           </Link>
         </div>
       </div>
