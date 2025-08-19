@@ -120,7 +120,6 @@ export const currentProjectsData = [
     ],
     gallery: [
       "https://ashishconstruction.in/wp-content/uploads/2025/07/IMG-20250703-WA0008.jpg",
-      "https://ashishconstruction.in/wp-content/uploads/2…hatsApp-Image-2025-07-03-at-15.18.29_33c8a459.jpg",
       "https://ashishconstruction.in/wp-content/uploads/2025/07/IMG-20250703-WA0008.jpg",
     ]
   },
@@ -144,7 +143,6 @@ export const currentProjectsData = [
     ],
     gallery: [
       "https://ashishconstruction.in/wp-content/uploads/2025/07/IMG-20250703-WA0008.jpg",
-      "https://ashishconstruction.in/wp-content/uploads/2…hatsApp-Image-2025-07-03-at-15.18.29_33c8a459.jpg",
       "https://ashishconstruction.in/wp-content/uploads/2025/07/IMG-20250703-WA0008.jpg",
     ]
   },

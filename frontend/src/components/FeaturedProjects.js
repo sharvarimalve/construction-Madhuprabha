@@ -1,10 +1,13 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { ArrowRight, MapPin, Home, Calendar, ExternalLink } from 'lucide-react';
 import { currentProjectsData } from '../mockData';
 
+
+
 const FeaturedProjects = () => {
   const featuredProjects = currentProjectsData.slice(0, 2);
+  const navigate = useNavigate();
 
   return (
     <section className="py-12 sm:py-16 lg:py-24 bg-gradient-to-b from-slate-50 via-white to-slate-100 relative overflow-hidden">
@@ -17,16 +20,16 @@ const FeaturedProjects = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-20">
-          
-          
+
+
           <h2 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-slate-900 mb-4 sm:mb-8 leading-tight">
             <span className="bg-gradient-to-r from-amber-600 via-yellow-600 to-orange-600 bg-clip-text text-transparent">
               Current Projects
             </span>
           </h2>
-          
+
           <p className="text-lg sm:text-xl text-slate-600 max-w-4xl mx-auto leading-relaxed px-4">
-            Explore our ongoing residential construction projects that demonstrate our commitment to 
+            Explore our ongoing residential construction projects that demonstrate our commitment to
             excellence, innovation, and meticulous attention to detail.
           </p>
         </div>
@@ -68,10 +71,10 @@ const FeaturedProjects = () => {
                   className="w-full h-full object-fill group-hover:scale-110 transition-transform duration-700"
                   loading="lazy"
                 />
-                
+
                 {/* Gradient overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                
+
                 {/* Status Badge */}
                 <div className="absolute top-4 sm:top-6 right-4 sm:right-6">
                   <div className="px-3 py-1.5 sm:px-4 sm:py-2 bg-gradient-to-r from-emerald-500 to-green-600 text-white text-xs sm:text-sm font-bold rounded-full shadow-lg backdrop-blur-sm border border-white/20">
@@ -81,7 +84,10 @@ const FeaturedProjects = () => {
 
                 {/* Hover Overlay */}
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                  <button className="group/btn p-3 sm:p-4 bg-white/20 backdrop-blur-sm border border-white/30 text-white rounded-full hover:bg-white/30 transform hover:scale-110 transition-all duration-300 shadow-xl">
+                  <button
+                    onClick={() => navigate(`/project/${project.id}`)}
+                    className="group/btn p-3 sm:p-4 bg-white/20 backdrop-blur-sm border border-white/30 text-white rounded-full hover:bg-white/30 transform hover:scale-110 transition-all duration-300 shadow-xl"
+                  >
                     <ExternalLink className="w-5 h-5 sm:w-7 sm:h-7" />
                   </button>
                 </div>
@@ -106,7 +112,7 @@ const FeaturedProjects = () => {
                 <h3 className="text-xl sm:text-2xl font-bold text-slate-900 mb-3 sm:mb-4 group-hover:text-amber-600 transition-colors duration-500 line-clamp-2">
                   {project.title}
                 </h3>
-                
+
                 <div className="space-y-2 sm:space-y-3 mb-4 sm:mb-6">
                   <div className="flex items-center text-slate-600 text-xs sm:text-sm">
                     <div className="w-6 h-6 sm:w-8 sm:h-8 bg-gradient-to-r from-amber-400 to-yellow-500 rounded-full flex items-center justify-center mr-2 sm:mr-3">
@@ -120,7 +126,7 @@ const FeaturedProjects = () => {
                     </div>
                     <span className="line-clamp-1">{project.area} • {project.type}</span>
                   </div>
-                  
+
                 </div>
 
                 <p className="text-slate-700 text-sm sm:text-base leading-relaxed mb-6 sm:mb-8 line-clamp-3">
@@ -128,33 +134,33 @@ const FeaturedProjects = () => {
                 </p>
 
                 <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4 mb-6 max-w-md mx-auto">
-                  <Link 
+                  <Link
                     to={`/project/${project.id}`}
                     className="group/btn relative w-full py-3 sm:py-4 px-4 sm:px-6 text-sm sm:text-base font-bold rounded-2xl overflow-hidden transition-all duration-500 transform hover:scale-105 block"
                   >
                     <div className="absolute inset-0 bg-gradient-to-r from-amber-500 via-yellow-500 to-orange-500 transition-all duration-500 group-hover/btn:from-yellow-400 group-hover/btn:via-amber-500 group-hover/btn:to-orange-600"></div>
-                    
+
                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12 -translate-x-full group-hover/btn:translate-x-full transition-transform duration-1000"></div>
-                    
+
                     <div className="absolute -inset-1 bg-gradient-to-r from-amber-400 to-yellow-500 rounded-2xl blur opacity-30 group-hover/btn:opacity-60 transition-opacity duration-500"></div>
-                    
+
                     <div className="relative z-10 flex items-center justify-center space-x-2 text-slate-900">
                       <span>View Details</span>
                       <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover/btn:translate-x-1 transition-transform duration-300" />
                     </div>
                   </Link>
-                  <a 
+                  <a
                     href="/images/Prajakta-Park-E-Brochure-New-1_compressed.pdf"
-                    target="_blank" 
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="group/btn relative w-full py-3 sm:py-4 px-4 sm:px-6 text-sm sm:text-base font-bold rounded-2xl overflow-hidden transition-all duration-500 transform hover:scale-105 block"
                   >
                     <div className="absolute inset-0 bg-gradient-to-r from-amber-500 via-yellow-500 to-orange-500 transition-all duration-500 group-hover/btn:from-yellow-400 group-hover/btn:via-amber-500 group-hover/btn:to-orange-600"></div>
-                    
+
                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12 -translate-x-full group-hover/btn:translate-x-full transition-transform duration-1000"></div>
-                    
+
                     <div className="absolute -inset-1 bg-gradient-to-r from-amber-400 to-yellow-500 rounded-2xl blur opacity-30 group-hover/btn:opacity-60 transition-opacity duration-500"></div>
-                    
+
                     <div className="relative z-10 flex items-center justify-center space-x-2 text-slate-900">
                       <span>E-brochure</span>
                       <ExternalLink className="w-4 h-4 sm:w-5 sm:h-5 group-hover/btn:translate-x-1 transition-transform duration-300" />
