@@ -1,45 +1,37 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, MapPin, Home, Calendar, ExternalLink } from 'lucide-react';
-import { currentProjectsData } from '../mockData';
+import { ArrowRight, MapPin, Home } from 'lucide-react';
+import { projectsData } from '../mockData';
 
-const FeaturedProjects = () => {
-  const featuredProjects = currentProjectsData.slice(0, 2);
+const CompletedProjects = () => {
+  const completedProjects = projectsData.filter(project => project.status === 'Completed').slice(0, 3);
 
   return (
     <section className="py-12 sm:py-16 lg:py-24 bg-gradient-to-b from-slate-50 via-white to-slate-100 relative overflow-hidden">
-      {/* Animated background elements */}
       <div className="absolute inset-0">
         <div className="absolute top-32 left-8 sm:left-20 w-48 sm:w-64 h-48 sm:h-64 bg-gradient-to-br from-amber-200/20 to-yellow-300/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '0s' }}></div>
         <div className="absolute bottom-40 right-8 sm:right-32 w-36 sm:w-48 h-36 sm:h-48 bg-gradient-to-br from-orange-200/20 to-amber-300/20 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '3s' }}></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {/* Section Header */}
         <div className="text-center mb-20">
-          
-          
           <h2 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-slate-900 mb-4 sm:mb-8 leading-tight">
             <span className="bg-gradient-to-r from-amber-600 via-yellow-600 to-orange-600 bg-clip-text text-transparent">
-              Current Projects
+              Completed Projects
             </span>
           </h2>
-          
           <p className="text-lg sm:text-xl text-slate-600 max-w-4xl mx-auto leading-relaxed px-4">
-            Explore our ongoing residential construction projects that demonstrate our commitment to 
-            excellence, innovation, and meticulous attention to detail.
+            Browse through our portfolio of successfully completed projects, showcasing our expertise and dedication to quality.
           </p>
         </div>
 
-        {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16 max-w-5xl mx-auto">
-          {featuredProjects.map((project, index) => (
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16 max-w-5xl mx-auto">
+          {completedProjects.map((project, index) => (
             <div
               key={project.id}
               className="group relative bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-700 overflow-hidden transform hover:-translate-y-4 border border-slate-200/50"
               style={{ animationDelay: `${index * 150}ms` }}
             >
-              {/* Curved top design */}
               <div className="absolute top-0 left-0 right-0 h-4">
                 <svg
                   className="w-full h-full"
@@ -48,10 +40,10 @@ const FeaturedProjects = () => {
                 >
                   <path
                     d="M0,20 Q200,0 400,20 L400,0 L0,0 Z"
-                    fill="url(#projectGradient)"
+                    fill="url(#completedProjectGradient)"
                   />
                   <defs>
-                    <linearGradient id="projectGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <linearGradient id="completedProjectGradient" x1="0%" y1="0%" x2="100%" y2="0%">
                       <stop offset="0%" style={{ stopColor: '#f59e0b', stopOpacity: 0.8 }} />
                       <stop offset="50%" style={{ stopColor: '#d97706', stopOpacity: 0.8 }} />
                       <stop offset="100%" style={{ stopColor: '#b45309', stopOpacity: 0.8 }} />
@@ -60,7 +52,6 @@ const FeaturedProjects = () => {
                 </svg>
               </div>
 
-              {/* Project Image */}
               <div className="relative h-56 sm:h-64 lg:h-72 overflow-hidden rounded-t-3xl">
                 <img
                   src={project.image}
@@ -68,28 +59,20 @@ const FeaturedProjects = () => {
                   className="w-full h-full object-fill group-hover:scale-110 transition-transform duration-700"
                   loading="lazy"
                 />
-                
-                {/* Gradient overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                
-                {/* Status Badge */}
                 <div className="absolute top-4 sm:top-6 right-4 sm:right-6">
                   <div className="px-3 py-1.5 sm:px-4 sm:py-2 bg-gradient-to-r from-emerald-500 to-green-600 text-white text-xs sm:text-sm font-bold rounded-full shadow-lg backdrop-blur-sm border border-white/20">
                     {project.status}
                   </div>
                 </div>
-
-                {/* Hover Overlay */}
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                  <button className="group/btn p-3 sm:p-4 bg-white/20 backdrop-blur-sm border border-white/30 text-white rounded-full hover:bg-white/30 transform hover:scale-110 transition-all duration-300 shadow-xl">
-                    <ExternalLink className="w-5 h-5 sm:w-7 sm:h-7" />
-                  </button>
+                  <Link to={`/project/${project.id}`} className="group/btn p-3 sm:p-4 bg-white/20 backdrop-blur-sm border border-white/30 text-white rounded-full hover:bg-white/30 transform hover:scale-110 transition-all duration-300 shadow-xl">
+                    <ArrowRight className="w-5 h-5 sm:w-7 sm:h-7" />
+                  </Link>
                 </div>
               </div>
 
-              {/* Project Content */}
               <div className="p-4 sm:p-6 lg:p-8 relative">
-                {/* Decorative curve */}
                 <div className="absolute top-0 left-0 right-0 h-2">
                   <svg
                     className="w-full h-full"
@@ -142,29 +125,11 @@ const FeaturedProjects = () => {
                     <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover/btn:translate-x-1 transition-transform duration-300" />
                   </div>
                 </Link>
-                <a 
-                  href="/images/Prajakta-Park-E-Brochure-New-1_compressed.pdf"
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="group/btn relative w-full py-3 sm:py-4 px-4 sm:px-6 text-sm sm:text-base font-bold rounded-2xl overflow-hidden transition-all duration-500 transform hover:scale-105 block mt-4"
-                >
-                  <div className="absolute inset-0 bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 transition-all duration-500 group-hover/btn:from-blue-400 group-hover/btn:via-blue-500 group-hover/btn:to-blue-600"></div>
-                  
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12 -translate-x-full group-hover/btn:translate-x-full transition-transform duration-1000"></div>
-                  
-                  <div className="absolute -inset-1 bg-gradient-to-r from-blue-400 to-blue-500 rounded-2xl blur opacity-30 group-hover/btn:opacity-60 transition-opacity duration-500"></div>
-                  
-                  <div className="relative z-10 flex items-center justify-center space-x-2 text-white">
-                    <span>E-brochure</span>
-                    <ExternalLink className="w-4 h-4 sm:w-5 sm:h-5 group-hover/btn:translate-x-1 transition-transform duration-300" />
-                  </div>
-                </a>
               </div>
             </div>
           ))}
         </div>
 
-        {/* View All Projects Button */}
         <div className="text-center">
           <Link
             to="/projects"
@@ -185,4 +150,4 @@ const FeaturedProjects = () => {
   );
 };
 
-export default FeaturedProjects;
+export default CompletedProjects;

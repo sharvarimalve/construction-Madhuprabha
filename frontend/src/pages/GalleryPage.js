@@ -10,7 +10,7 @@ const GalleryPage = () => {
 
   const allGalleryItems = [
     ...galleryImages.map(item => ({ ...item, category: 'image' })),
-    ...galleryVideos.map(item => ({ ...item, category: 'video', url: item.thumbnail }))
+    ...galleryVideos.map(item => ({ ...item, category: 'video' }))
   ];
 
   const filteredItems = allGalleryItems.filter(item => {
@@ -35,9 +35,6 @@ const GalleryPage = () => {
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-orange-500/20 to-red-600/20 backdrop-blur-sm border border-orange-500/30 rounded-full mb-6">
-            <span className="text-orange-400 font-semibold text-sm uppercase tracking-wider">Gallery</span>
-          </div>
           <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-6">
             <span className="bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">
               Project
@@ -52,7 +49,7 @@ const GalleryPage = () => {
       </section>
 
       {/* Controls & Filters */}
-      <section className="py-12 bg-white border-b border-gray-200 sticky top-20 z-40 backdrop-blur-sm">
+      <section className="py-12 bg-white border-b border-gray-200  top-20 z-40 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center space-y-6 lg:space-y-0">
             {/* Category Tabs */}
@@ -159,9 +156,15 @@ const GalleryPage = () => {
                     {/* Play Button for Videos */}
                     {item.category === 'video' && (
                       <div className="absolute inset-0 flex items-center justify-center">
-                        <button className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-600 rounded-full flex items-center justify-center shadow-2xl transform group-hover:scale-110 transition-all duration-300 opacity-80 group-hover:opacity-100">
-                          <Play className="w-6 h-6 text-white ml-1" />
-                        </button>
+                        <iframe
+                          src={item.url}
+                          title={item.title}
+                          frameBorder="0"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowFullScreen
+                          className="w-full h-full absolute inset-0"
+                        ></iframe>
+                        
                       </div>
                     )}
 
@@ -218,9 +221,15 @@ const GalleryPage = () => {
 
                     {item.category === 'video' && (
                       <div className="absolute inset-0 flex items-center justify-center">
-                        <button className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-600 rounded-full flex items-center justify-center shadow-xl transform group-hover:scale-110 transition-all duration-300 opacity-80 group-hover:opacity-100">
-                          <Play className="w-4 h-4 text-white ml-1" />
-                        </button>
+                        <iframe
+                          src={item.url}
+                          title={item.title}
+                          frameBorder="0"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowFullScreen
+                          className="w-full h-full absolute inset-0"
+                        ></iframe>
+                        
                       </div>
                     )}
 

@@ -55,10 +55,11 @@ export const projectsData = [
       "High-speed elevator access"
     ],
     gallery: [
-      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&h=600&fit=crop"
+      "https://ashishconstruction.in/wp-content/uploads/2021/08/4-min-3.jpg",
+      "https://ashishconstruction.in/wp-content/uploads/2021/08/3-min-3.jpg",
+      "https://ashishconstruction.in/wp-content/uploads/2021/08/2-min-4.jpg",
+      "https://ashishconstruction.in/wp-content/uploads/2021/08/1-min-3.jpg",
+      "https://ashishconstruction.in/wp-content/uploads/2021/08/7-min-4.jpg"
     ]
   },
   {
@@ -118,10 +119,9 @@ export const currentProjectsData = [
       "24/7 concierge service"
     ],
     gallery: [
-      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1583608205776-bfd35f0d9f83?w=800&h=600&fit=crop"
+      "https://ashishconstruction.in/wp-content/uploads/2025/07/IMG-20250703-WA0008.jpg",
+      "https://ashishconstruction.in/wp-content/uploads/2…hatsApp-Image-2025-07-03-at-15.18.29_33c8a459.jpg",
+      "https://ashishconstruction.in/wp-content/uploads/2025/07/IMG-20250703-WA0008.jpg",
     ]
   },
   {
@@ -143,9 +143,9 @@ export const currentProjectsData = [
       "Electric vehicle charging"
     ],
     gallery: [
-      "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1448630360428-65456885c650?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=800&h=600&fit=crop"
+      "https://ashishconstruction.in/wp-content/uploads/2025/07/IMG-20250703-WA0008.jpg",
+      "https://ashishconstruction.in/wp-content/uploads/2…hatsApp-Image-2025-07-03-at-15.18.29_33c8a459.jpg",
+      "https://ashishconstruction.in/wp-content/uploads/2025/07/IMG-20250703-WA0008.jpg",
     ]
   },
   
@@ -240,32 +240,11 @@ export const galleryImages = [
 export const galleryVideos = [
   {
     id: 1,
-    thumbnail: "https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?w=400&h=300&fit=crop",
-    title: "Construction Process",
-    category: "video",
-    duration: "2:30"
+    title: "Construction Phase 1",
+    thumbnail: "/thumbnails/video1.jpg",
+    duration: "3:42",
+    url: "https://www.youtube.com/embed/UpdIzsq1G6w"
   },
-  {
-    id: 2, 
-    thumbnail: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=400&h=300&fit=crop",
-    title: "Villa Tour",
-    category: "video",
-    duration: "1:45"
-  },
-  {
-    id: 3,
-    thumbnail: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=400&h=300&fit=crop",
-    title: "Project Timeline",
-    category: "video", 
-    duration: "3:15"
-  },
-  {
-    id: 4,
-    thumbnail: "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=400&h=300&fit=crop",
-    title: "Handover Ceremony",
-    category: "video",
-    duration: "1:20"
-  }
 ];
 
 export const testimonials = [
@@ -297,7 +276,7 @@ export const testimonials = [
 
 export const aboutUsData = {
   title: "About Madhu Prabha Construction",
-  shortDescription: "Leading residential construction company with 20 Glorious Years of experience in creating quality homes.",
+  shortDescription: "Leading residential construction company with 20 Glorious Years of experience in creating quality construction.",
   fullDescription: ` Madhu Prabha Constructions began its journey in 2005 as Ashish Construction,
                  founded with a simple yet powerful vision: to build structures that not only
                   meet but exceed expectations. Over the years, we have evolved from a small 
