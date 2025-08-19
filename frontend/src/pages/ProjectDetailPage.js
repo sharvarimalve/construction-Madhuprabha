@@ -22,6 +22,17 @@ const ProjectDetailPage = () => {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
+  React.useEffect(() => {
+    if (lightboxOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+  }, [lightboxOpen]);
+
   // Find project in both completed and current projects
   const allProjects = [...projectsData, ...currentProjectsData];
   const project = allProjects.find((p) => p.id === parseInt(id));
@@ -135,8 +146,9 @@ const ProjectDetailPage = () => {
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-96 object-fill cursor-pointer"
+                  className="w-full max-h-screen object-contain cursor-pointer"
                   onClick={() => openLightbox(0)}
+                  loading="lazy"
                 />
               </div>
             </div>

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Image as ImageIcon, Video, Play, ExternalLink, Grid, List, Search, Filter } from 'lucide-react';
+import { Image as ImageIcon, Video, Play, ExternalLink, Grid, List, Search, Filter, X } from 'lucide-react';
 import { galleryImages, galleryVideos } from '../mockData';
 import Footer from '../components/Footer';
 
@@ -7,6 +7,18 @@ const GalleryPage = () => {
   const [activeTab, setActiveTab] = useState('all');
   const [viewMode, setViewMode] = useState('grid');
   const [searchTerm, setSearchTerm] = useState('');
+  const [activeVideo, setActiveVideo] = useState(null);
+
+  React.useEffect(() => {
+    if (activeVideo) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+  }, [activeVideo]);
 
   const allGalleryItems = [
     ...galleryImages.map(item => ({ ...item, category: 'image' })),
@@ -156,7 +168,11 @@ const GalleryPage = () => {
 
                     {/* Play Button for Videos */}
                     {item.category === 'video' && (
-                      <div className="absolute inset-0 flex items-center justify-center">
+                      <div 
+                        className="absolute inset-0 flex items-center justify-center cursor-pointer"
+                        onClick={() => setActiveVideo(item.url)}
+                      >
+                        <Play className="w-16 h-16 text-white ml-1" />
                         <iframe
                           src={item.url}
                           title={item.title}
@@ -222,7 +238,11 @@ const GalleryPage = () => {
                     )}
 
                     {item.category === 'video' && (
-                      <div className="absolute inset-0 flex items-center justify-center">
+                      <div 
+                        className="absolute inset-0 flex items-center justify-center cursor-pointer"
+                        onClick={() => setActiveVideo(item.url)}
+                      >
+                        <Play className="w-12 h-12 text-white ml-1" />
                         <iframe
                           src={item.url}
                           title={item.title}

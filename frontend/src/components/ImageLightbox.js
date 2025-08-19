@@ -1,7 +1,7 @@
 import React from 'react';
-import { X, ChevronLeft, ChevronRight, Download, Share2 } from 'lucide-react';
+import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 
-const ImageLightbox = ({ images, currentIndex, isOpen, onClose, onNext, onPrev }) => {
+const ImageLightbox = ({ images, currentIndex, isOpen, onClose, onNext, onPrev, onSelect }) => {
   if (!isOpen || !images || images.length === 0) return null;
 
   const currentImage = images[currentIndex];
@@ -21,10 +21,10 @@ const ImageLightbox = ({ images, currentIndex, isOpen, onClose, onNext, onPrev }
     if (isOpen) {
       document.body.style.overflow = 'hidden';
     } else {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = 'auto';
     }
     return () => {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = 'auto';
     };
   }, [isOpen]);
 
@@ -49,24 +49,16 @@ const ImageLightbox = ({ images, currentIndex, isOpen, onClose, onNext, onPrev }
             </div>
           </div>
           
-          <div className="flex items-center space-x-2">
-            <button className="p-3 bg-slate-800/50 backdrop-blur-sm border border-slate-600/50 text-white rounded-xl hover:bg-slate-700/50 transition-colors duration-300">
-              <Download className="w-5 h-5" />
-            </button>
-            <button className="p-3 bg-slate-800/50 backdrop-blur-sm border border-slate-600/50 text-white rounded-xl hover:bg-slate-700/50 transition-colors duration-300">
-              <Share2 className="w-5 h-5" />
-            </button>
-            <button 
-              onClick={onClose}
-              className="p-3 bg-slate-800/50 backdrop-blur-sm border border-slate-600/50 text-white rounded-xl hover:bg-slate-700/50 transition-colors duration-300"
-            >
-              <X className="w-5 h-5" />
-            </button>
-          </div>
+          <button 
+            onClick={onClose}
+            className="p-3 bg-slate-800/50 backdrop-blur-sm border border-slate-600/50 text-white rounded-xl hover:bg-slate-700/50 transition-colors duration-300"
+          >
+            <X className="w-5 h-5" />
+          </button>
         </div>
 
         {/* Main Image */}
-        <div className="flex-1 flex items-center justify-center relative">
+        <div className="flex-1 flex items-center justify-center relative min-h-0">
           <img
             src={currentImage.url || currentImage}
             alt={currentImage.title || 'Gallery Image'}
@@ -100,9 +92,7 @@ const ImageLightbox = ({ images, currentIndex, isOpen, onClose, onNext, onPrev }
               {images.map((image, index) => (
                 <button
                   key={index}
-                  onClick={() => {
-                    // This would need to be passed as a prop to change current index
-                  }}
+                  onClick={() => onSelect(index)} 
                   className={`flex-shrink-0 w-16 h-16 rounded-lg overflow-hidden border-2 transition-all duration-300 ${
                     index === currentIndex 
                       ? 'border-amber-400 scale-110' 
@@ -112,7 +102,7 @@ const ImageLightbox = ({ images, currentIndex, isOpen, onClose, onNext, onPrev }
                   <img
                     src={image.url || image}
                     alt={`Thumbnail ${index + 1}`}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-fill"
                   />
                 </button>
               ))}
