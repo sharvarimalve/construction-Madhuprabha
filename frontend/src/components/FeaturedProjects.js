@@ -127,45 +127,47 @@ const FeaturedProjects = () => {
                   {project.description}
                 </p>
 
-                <Link 
-                  to={`/project/${project.id}`}
-                  className="group/btn relative w-full py-3 sm:py-4 px-4 sm:px-6 text-sm sm:text-base font-bold rounded-2xl overflow-hidden transition-all duration-500 transform hover:scale-105 block"
-                >
-                  <div className="absolute inset-0 bg-gradient-to-r from-amber-500 via-yellow-500 to-orange-500 transition-all duration-500 group-hover/btn:from-yellow-400 group-hover/btn:via-amber-500 group-hover/btn:to-orange-600"></div>
-                  
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12 -translate-x-full group-hover/btn:translate-x-full transition-transform duration-1000"></div>
-                  
-                  <div className="absolute -inset-1 bg-gradient-to-r from-amber-400 to-yellow-500 rounded-2xl blur opacity-30 group-hover/btn:opacity-60 transition-opacity duration-500"></div>
-                  
-                  <div className="relative z-10 flex items-center justify-center space-x-2 text-slate-900">
-                    <span>View Details</span>
-                    <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover/btn:translate-x-1 transition-transform duration-300" />
-                  </div>
-                </Link>
-                <a 
-                  href="/images/Prajakta-Park-E-Brochure-New-1_compressed.pdf"
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="group/btn relative w-full py-3 sm:py-4 px-4 sm:px-6 text-sm sm:text-base font-bold rounded-2xl overflow-hidden transition-all duration-500 transform hover:scale-105 block mt-4"
-                >
-                  <div className="absolute inset-0 bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 transition-all duration-500 group-hover/btn:from-blue-400 group-hover/btn:via-blue-500 group-hover/btn:to-blue-600"></div>
-                  
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12 -translate-x-full group-hover/btn:translate-x-full transition-transform duration-1000"></div>
-                  
-                  <div className="absolute -inset-1 bg-gradient-to-r from-blue-400 to-blue-500 rounded-2xl blur opacity-30 group-hover/btn:opacity-60 transition-opacity duration-500"></div>
-                  
-                  <div className="relative z-10 flex items-center justify-center space-x-2 text-white">
-                    <span>E-brochure</span>
-                    <ExternalLink className="w-4 h-4 sm:w-5 sm:h-5 group-hover/btn:translate-x-1 transition-transform duration-300" />
-                  </div>
-                </a>
+                <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4 mb-6 max-w-md mx-auto">
+                  <Link 
+                    to={`/project/${project.id}`}
+                    className="group/btn relative w-full py-3 sm:py-4 px-4 sm:px-6 text-sm sm:text-base font-bold rounded-2xl overflow-hidden transition-all duration-500 transform hover:scale-105 block"
+                  >
+                    <div className="absolute inset-0 bg-gradient-to-r from-amber-500 via-yellow-500 to-orange-500 transition-all duration-500 group-hover/btn:from-yellow-400 group-hover/btn:via-amber-500 group-hover/btn:to-orange-600"></div>
+                    
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12 -translate-x-full group-hover/btn:translate-x-full transition-transform duration-1000"></div>
+                    
+                    <div className="absolute -inset-1 bg-gradient-to-r from-amber-400 to-yellow-500 rounded-2xl blur opacity-30 group-hover/btn:opacity-60 transition-opacity duration-500"></div>
+                    
+                    <div className="relative z-10 flex items-center justify-center space-x-2 text-slate-900">
+                      <span>View Details</span>
+                      <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover/btn:translate-x-1 transition-transform duration-300" />
+                    </div>
+                  </Link>
+                  <a 
+                    href="/images/Prajakta-Park-E-Brochure-New-1_compressed.pdf"
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="group/btn relative w-full py-3 sm:py-4 px-4 sm:px-6 text-sm sm:text-base font-bold rounded-2xl overflow-hidden transition-all duration-500 transform hover:scale-105 block"
+                  >
+                    <div className="absolute inset-0 bg-gradient-to-r from-amber-500 via-yellow-500 to-orange-500 transition-all duration-500 group-hover/btn:from-yellow-400 group-hover/btn:via-amber-500 group-hover/btn:to-orange-600"></div>
+                    
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12 -translate-x-full group-hover/btn:translate-x-full transition-transform duration-1000"></div>
+                    
+                    <div className="absolute -inset-1 bg-gradient-to-r from-amber-400 to-yellow-500 rounded-2xl blur opacity-30 group-hover/btn:opacity-60 transition-opacity duration-500"></div>
+                    
+                    <div className="relative z-10 flex items-center justify-center space-x-2 text-slate-900">
+                      <span>E-brochure</span>
+                      <ExternalLink className="w-4 h-4 sm:w-5 sm:h-5 group-hover/btn:translate-x-1 transition-transform duration-300" />
+                    </div>
+                  </a>
+                </div>
               </div>
             </div>
           ))}
         </div>
 
         {/* View All Projects Button */}
-        <div className="text-center">
+        {/* <div className="text-center">
           <Link
             to="/projects"
             className="group relative inline-flex items-center space-x-2 sm:space-x-4 px-8 sm:px-12 py-4 sm:py-6 font-bold text-base sm:text-lg rounded-full overflow-hidden transition-all duration-500 transform hover:scale-105"
@@ -179,7 +181,7 @@ const FeaturedProjects = () => {
             <span className="relative z-10 text-white group-hover:text-slate-900 transition-colors duration-300">View All Projects</span>
             <ArrowRight className="relative z-10 w-5 h-5 sm:w-6 sm:h-6 text-white group-hover:text-slate-900 group-hover:translate-x-2 transition-all duration-300" />
           </Link>
-        </div>
+        </div> */}
       </div>
     </section>
   );
