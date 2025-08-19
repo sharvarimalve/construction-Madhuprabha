@@ -34,6 +34,21 @@ const AboutPage = () => {
     }
   ];
 
+  const teamMembers = [
+    {
+      name: "Mr. Ashish Londe",
+      role: "Founder & Managing Director",
+      experience: "19+ Years Experience",
+      image: "/images/vikashsir.jpeg",
+    },
+    {
+      name: "Mr. Vikas Mishra",
+      role: "Project Manager",
+      experience: "12+ Years Experience",
+      image: "/images/project_manager.jpeg",
+    },
+  ];
+
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -179,8 +194,39 @@ const AboutPage = () => {
         </div>
       </section>
 
+      {/* Our Team Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              Our{' '}
+              <span className="bg-gradient-to-r from-orange-600 to-red-700 bg-clip-text text-transparent">
+                Team
+              </span>
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Meet the leaders who drive our vision and ensure excellence in every project.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+            {teamMembers.map((member, index) => (
+              <div key={index} className="bg-gradient-to-br from-gray-50 to-orange-50 pt-5 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 text-center">
+                <img
+                  src={member.image}
+                  alt={member.name}
+                  className="w-55 h-48 object-cover  mx-auto mb-6 shadow-lg border-4 border-white"
+                />
+                <h3 className="text-2xl font-bold text-gray-900">{member.name}</h3>
+                <p className="text-orange-600 font-semibold mb-2">{member.role}</p>
+                <p className="text-gray-600">{member.experience}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Testimonials */}
-     
       <Footer />
     </div>
   );
