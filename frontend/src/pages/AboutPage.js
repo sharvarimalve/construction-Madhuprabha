@@ -6,8 +6,8 @@ import Footer from '../components/Footer';
 const AboutPage = () => {
   const achievements = [
     { icon: Award, number: "20+", label: "Years Experience", color: "from-orange-500 to-red-600" },
-    { icon: Building2, number: "500+", label: "Projects Completed", color: "from-blue-500 to-blue-600" },
-    { icon: Users, number: "450+", label: "Happy Clients", color: "from-green-500 to-green-600" },
+    { icon: Building2, number: "200+", label: "Projects Completed", color: "from-blue-500 to-blue-600" },
+    { icon: Users, number: "150+", label: "Happy Clients", color: "from-green-500 to-green-600" },
     { icon: TrendingUp, number: "100%", label: "Success Rate", color: "from-purple-500 to-purple-600" }
   ];
 
@@ -54,7 +54,7 @@ const AboutPage = () => {
                 Building Excellence
               </span>
               <br />
-              <span className="text-white">Since 2009</span>
+              <span className="text-white">Since 2005</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
               {aboutUsData.shortDescription}

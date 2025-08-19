@@ -28,8 +28,8 @@ const Navbar = () => {
 
   const navItems = [
     { name: 'Home', path: '/', icon: Home },
-    { name: 'Projects', path: '/projects', icon: Building },
     { name: 'About Us', path: '/about', icon: Users },
+    { name: 'Projects', path: '/projects', icon: Building },
     { name: 'Gallery', path: '/gallery', icon: Image },
     { name: 'Contact', path: '/contact', icon: Phone }
   ];
@@ -121,7 +121,7 @@ const Navbar = () => {
                   <Link
                     key={item.name}
                     to={item.path}
-                    className={`group relative px-6 py-3 rounded-full flex items-center space-x-2 font-medium transition-all duration-500 transform hover:scale-105 ${
+                    className={`group relative px-4 py-1 rounded-full flex items-center space-x-2 font-medium transition-all duration-500 transform hover:scale-105 ${
                       isActive(item.path)
                         ? 'text-amber-300 scale-105'
                         : 'text-slate-200 hover:text-amber-200'
@@ -146,9 +146,9 @@ const Navbar = () => {
                     <span className="relative z-10">{item.name}</span>
                     
                     {/* Active indicator */}
-                    {isActive(item.path) && (
-                      <div className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-2 h-2 bg-gradient-to-r from-amber-400 to-yellow-500 rounded-full animate-bounce"></div>
-                    )}
+                    {/* {isActive(item.path) && (
+                      <div className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-2 h-2 bg-gradient-to-r from-amber-400 to-yellow-500  animate-bounce"></div>
+                    )} */}
                   </Link>
                 );
               })}
@@ -158,7 +158,7 @@ const Navbar = () => {
             <div className="hidden md:block relative z-10">
               <Link
                 to="/contact"
-                className="group relative px-8 py-3 font-semibold rounded-[50px] overflow-hidden transition-all duration-500 transform hover:scale-105"
+                className="group relative px-5 py-2 font-semibold rounded-[50px] overflow-hidden transition-all duration-500 transform hover:scale-105"
               >
                 {/* Animated gradient background */}
                 <div className="absolute inset-0 bg-gradient-to-r from-amber-500 via-orange-500 to-yellow-600 rounded-[50px] transition-all duration-500 group-hover:from-yellow-500 group-hover:via-amber-500 group-hover:to-orange-600"></div>
@@ -211,18 +211,18 @@ const Navbar = () => {
                   >
                     <Icon className="w-5 h-5" />
                     <span className="font-medium">{item.name}</span>
-                    {isActive(item.path) && (
+                    {/* {isActive(item.path) && (
                       <div className="ml-auto w-2 h-2 bg-gradient-to-r from-amber-400 to-yellow-500 rounded-full animate-pulse"></div>
-                    )}
+                    )} */}
                   </Link>
                 );
               })}
               
-              <div className="px-4 pt-4">
+              <div className="px-2 pt-4">
                 <Link
                   to="/contact"
                   onClick={() => setIsOpen(false)}
-                  className="group block w-full py-4 bg-gradient-to-r from-amber-500 to-yellow-600 text-slate-900 text-center font-bold rounded-[50px] hover:from-yellow-500 hover:to-amber-600 transition-all duration-300 shadow-xl transform hover:scale-105"
+                  className="group block w-full py-2 bg-gradient-to-r from-amber-500 to-yellow-600 text-slate-900 text-center font-bold rounded-[30px] hover:from-yellow-500 hover:to-amber-600 transition-all duration-300 shadow-xl transform hover:scale-105"
                 >
                   <span className="relative z-10">Get Quote</span>
                 </Link>

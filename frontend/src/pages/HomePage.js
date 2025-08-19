@@ -7,6 +7,7 @@ import Gallery from '../components/Gallery';
 import Footer from '../components/Footer';
 import { testimonials } from '../mockData';
 import { Star, Quote } from 'lucide-react';
+import CompletedProjects from '../components/CompletedProjects';
 
 const HomePage = () => {
   return (
@@ -15,6 +16,7 @@ const HomePage = () => {
       <FeaturedProjects />
       <AboutSection />
       <ContactSection />
+      <CompletedProjects />
       {/* Testimonials Section */}
       <section className="relative py-24 bg-gradient-to-br from-amber-50 via-white to-orange-50 overflow-hidden">
         {/* Decorative blobs */}
@@ -66,9 +68,6 @@ const HomePage = () => {
                       <div className="font-bold text-slate-900">{t.name}</div>
                       <div className="text-sm text-slate-500">{t.location} • {t.project}</div>
                     </div>
-                    <div className="px-3 py-1 text-xs font-semibold rounded-full bg-amber-100 text-amber-700 border border-amber-200">
-                      Verified
-                    </div>
                   </div>
                 </div>
               </div>
@@ -78,7 +77,7 @@ const HomePage = () => {
           {/* CTA */}
           <div className="text-center mt-14">
             <a
-              href="#contact"
+              href="/contact"
               className="group relative inline-flex items-center space-x-3 px-10 py-4 font-bold rounded-full overflow-hidden transition-all duration-500 hover:scale-105"
             >
               <div className="absolute inset-0 bg-gradient-to-r from-amber-500 via-orange-500 to-yellow-500 transition-all duration-500 group-hover:from-yellow-400 group-hover:via-amber-500 group-hover:to-orange-600" />
@@ -89,7 +88,7 @@ const HomePage = () => {
           </div>
         </div>
       </section>
-      <Gallery />
+      {/* <Gallery /> */}
       <Footer />
     </div>
   );
