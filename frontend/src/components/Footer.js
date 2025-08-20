@@ -18,7 +18,7 @@ const Footer = () => {
 
   const services = [
     'Residential Construction',
-    'Villa Development', 
+    'Villa Development',
     'Apartment Projects',
     'Home Renovation',
     'Interior Design',
@@ -55,12 +55,12 @@ const Footer = () => {
               <stop offset="100%" style={{ stopColor: '#b45309', stopOpacity: 0.6 }} />
             </linearGradient>
           </defs>
-          
+
           <path
             d="M0,100 L0,40 Q300,10 600,40 T1200,40 L1200,100 Z"
             fill="url(#footerTopGradient)"
           />
-          
+
           <path
             d="M0,100 L0,50 Q300,20 600,50 T1200,50 L1200,100 Z"
             fill="url(#footerAccent)"
@@ -85,25 +85,25 @@ const Footer = () => {
                 <div className="relative">
                   {/* Animated glow */}
                   <div className="absolute -inset-3 bg-gradient-to-r from-amber-400 to-yellow-500 rounded-2xl blur opacity-30 group-hover:opacity-60 transition-opacity duration-500 animate-pulse"></div>
-                  
+
                   {/* Logo container */}
                   <div className="relative w-50 h-10 rounded-lg overflow-hidden transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-lg">
-                  <img 
-                    src="/images/Madhuprabhalogo.jpg" 
-                    alt="Madhuprabha Construction Logo" 
-                    className="w-full h-full object-fill"
-                  />
+                    <img
+                      src="/images/Madhuprabhalogo.jpg"
+                      alt="Madhuprabha Construction Logo"
+                      className="w-full h-full object-fill"
+                    />
+                  </div>
                 </div>
-                </div>
-                
-                
+
+
               </Link>
-              
+
               <p className="text-slate-300 leading-relaxed">
-                Building dreams into reality with 20+ years of experience in premium residential construction. 
+                Building dreams into reality with 20+ years of experience in premium residential construction.
                 Quality craftsmanship and customer satisfaction is our priority.
               </p>
-              
+
               {/* Enhanced Social Links */}
               <div className="flex space-x-4">
                 {socialLinks.map((social, index) => {
@@ -145,6 +145,7 @@ const Footer = () => {
               </ul>
             </div>
 
+
             {/* Services */}
             <div className="space-y-6">
               <h4 className="text-xl font-bold text-white relative">
@@ -174,38 +175,32 @@ const Footer = () => {
                   <div className="absolute -bottom-2 left-0 w-12 h-1 bg-gradient-to-r from-amber-400 to-yellow-500 rounded-full"></div>
                 </span>
               </h4>
-              
+
               <div className="space-y-6">
                 <div className="group flex items-start space-x-4 p-4 rounded-xl bg-slate-800/30 hover:bg-slate-700/30 transition-colors duration-300">
                   <MapPin className="w-6 h-6 text-amber-400 mt-1 flex-shrink-0 group-hover:scale-110 transition-transform duration-300" />
-                  <p className="text-slate-300 leading-relaxed group-hover:text-slate-200 transition-colors duration-300">{contactData.address}</p>
+                  <a href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(contactData.address)}`} target="_blank" rel="noopener noreferrer" className="text-slate-300 leading-relaxed group-hover:text-slate-200 transition-colors duration-300">{contactData.address}</a>
                 </div>
-                
+
                 <div className="group flex items-center space-x-4 p-4 rounded-xl bg-slate-800/30 hover:bg-slate-700/30 transition-colors duration-300">
                   <Phone className="w-6 h-6 text-amber-400 flex-shrink-0 group-hover:scale-110 transition-transform duration-300" />
-                  <p className="text-slate-300 group-hover:text-slate-200 transition-colors duration-300">{contactData.phone1}</p>
+                  <a href={`tel:${contactData.phone1}`} className="text-slate-300 group-hover:text-slate-200 transition-colors duration-300">{contactData.phone1}</a>
                 </div>
-                
-                <div className="group flex items-center space-x-4 p-4 rounded-xl bg-slate-800/30 hover:bg-slate-700/30 transition-colors duration-300">
-                  <Mail className="w-6 h-6 text-amber-400 flex-shrink-0 group-hover:scale-110 transition-transform duration-300" />
-                  <p className="text-slate-300 group-hover:text-slate-200 transition-colors duration-300">{contactData.email}</p>
-                </div>
-              </div>
 
-              {/* Enhanced CTA Button */}
-              <Link
-                to="/contact"
-                className="group relative inline-flex items-center space-x-3 px-8 py-4 font-bold rounded-2xl overflow-hidden transition-all duration-500 transform hover:scale-105"
-              >
-                <div className="absolute inset-0 bg-gradient-to-r from-amber-500 via-yellow-500 to-orange-500 transition-all duration-500 group-hover:from-yellow-400 group-hover:via-amber-500 group-hover:to-orange-600"></div>
-                
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
-                
-                <div className="absolute -inset-1 bg-gradient-to-r from-amber-400 to-yellow-500 rounded-2xl blur opacity-30 group-hover:opacity-60 transition-opacity duration-500"></div>
-                
-                <span className="relative z-10 text-slate-900">Get Quote</span>
-                <ArrowUp className="relative z-10 w-5 h-5 text-slate-900 group-hover:rotate-45 transition-transform duration-300" />
-              </Link>
+                <div className="group flex items-start space-x-4 p-4 rounded-xl bg-slate-800/30 hover:bg-slate-700/30 transition-colors duration-300">
+                  <Mail className="w-6 h-6 text-amber-400 flex-shrink-0 group-hover:scale-110 transition-transform duration-300" />
+
+                  <div className="flex-1 min-w-0">
+                    <a
+                      href={`mailto:${contactData.email}`}
+                      className="block text-slate-300 group-hover:text-slate-200 transition-colors duration-300 break-words whitespace-normal xl:text-base lg:text-sm md:text-sm text-xs"
+                    >
+                      {contactData.email}
+                    </a>
+                  </div>
+                </div>
+
+              </div>
             </div>
           </div>
         </div>
@@ -224,13 +219,13 @@ const Footer = () => {
                 <stop offset="100%" style={{ stopColor: '#334155', stopOpacity: 1 }} />
               </linearGradient>
             </defs>
-            
+
             <path
               d="M0,0 Q300,25 600,0 T1200,0 L1200,50 L0,50 Z"
               fill="url(#bottomGradient)"
             />
           </svg>
-          
+
           <div className="absolute inset-0 bg-gradient-to-r from-slate-900 to-slate-800">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
               <div className="flex flex-col sm:flex-row justify-between items-center w-full space-y-4 sm:space-y-0">
