@@ -398,7 +398,7 @@ export const currentProjectsData = [
     location: "Abhyankar Nagar, Nagpur",
     type: "Residential",
     status: "In Progress",
-    image: "https://madhuprabhaconstructions.in/images/building.jfif",
+    image: "/images/prajktaclassic.png",
     description: "A 5 level 3BHK luxurious park view apartment located in the lap of nature. A peaceful location in the heart of the city where you can enjoy your mornings with blissful greenery. A Perfect Home with Modern Amenities at Abhyankar Nagar, Nagpur.",    
     fullDescription: "Currently under construction, this prestigious 5-floor luxury apartment complex will feature 40 premium units with breathtaking city views. The project includes a sky lounge, infinity pool, fitness center, and landscaped gardens. Each apartment is designed with premium finishes and smart home features.",
     features: [
