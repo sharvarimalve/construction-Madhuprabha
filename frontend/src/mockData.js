@@ -9,7 +9,6 @@ export const projectsData = [
     type: "Residential",
     status: "Completed",
     image: "https://madhuprabhaconstructions.in/images/prajktaclassic.png",
-    completionDate: "2023",
     description: "Premium residential project with modern amenities.",
     fullDescription: "This stunning luxury villa represents the pinnacle of contemporary residential design. Spanning 3500 sq ft, the property features an open-plan living concept with floor-to-ceiling windows that flood the interiors with natural light. The villa includes 4 spacious bedrooms, 3 full bathrooms, a modern kitchen with island, and a private garden with swimming pool. High-end finishes throughout include Italian marble flooring, custom millwork, and smart home automation systems. The project was completed on time and within budget, earning exceptional client satisfaction.",
     features: [
@@ -37,11 +36,6 @@ export const projectsData = [
     type: "Residential",
     status: "Completed",
     image: "https://madhuprabhaconstructions.in/images/PRAJAKTA-PINNACLE-TELECOM-NAGAR.jpg",
-    completionDate: "January 2024",
-    startDate: "March 2022",
-    budget: "₹15 Crores",
-    client: "Skyline Developers",
-    architect: "Urban Design Associates",
     description: "25-unit premium apartment complex with modern amenities.",
     fullDescription: "A prestigious residential complex featuring 25 premium apartments designed for modern urban living. Each unit offers spacious layouts ranging from 1800 to 2400 sq ft, with high-quality finishes and contemporary design elements. The complex includes a clubhouse, fitness center, landscaped gardens, and 24/7 security. Located in the heart of Andheri East, residents enjoy excellent connectivity to business districts and entertainment hubs.",
     features: [
@@ -70,11 +64,87 @@ export const projectsData = [
     type: "Residential",
     status: "Completed",
     image: "https://madhuprabhaconstructions.in/images/portfolio3.png",
-    completionDate: "December 2023",
-    startDate: "August 2022",
-    budget: "₹1.8 Crores",
-    client: "Mrs. Priya Sharma",
-    architect: "Modern Living Designs",
+    description: "Spacious duplex with garden and parking facility.",
+    fullDescription: "This elegant duplex home combines traditional charm with modern conveniences across 2800 sq ft of thoughtfully designed space. The ground floor features an open living area, modern kitchen, and guest bedroom, while the upper level houses the master suite and additional bedrooms. The property includes a private garden, covered parking, and premium finishes throughout.",
+    features: [
+      "Duplex design with 3 bedrooms",
+      "Open-plan ground floor",
+      "Private garden and terrace",
+      "Modern kitchen with breakfast counter",
+      "Master suite with walk-in closet",
+      "Covered parking for 2 cars",
+      "Premium wood flooring",
+      "Energy-efficient lighting"
+    ],
+    gallery: [
+      "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1448630360428-65456885c650?w=800&h=600&fit=crop"
+    ]
+  },
+  {
+    id: 4,
+    title: 'Shopping Mall Construction',
+    location: 'Nagpur',
+    area: "3BHK",
+    type: "Residential",
+    status: "Completed",
+    image:'https://images.pexels.com/photos/1642125/pexels-photo-1642125.jpeg?auto=compress&cs=tinysrgb&w=600',
+    description: 'Large-scale retail complex with entertainment zones and parking facilities.',
+    fullDescription: `This ambitious shopping mall project in Noida is currently under construction and represents 
+      one of our largest Residential undertakings. The mall will feature multiple retail zones, entertainment areas, 
+      food courts, and extensive parking facilities. The design focuses on creating an engaging shopping experience 
+      while maintaining high standards of safety and accessibility.`,
+    features: [
+      "Duplex design with 3 bedrooms",
+      "Open-plan ground floor",
+      "Private garden and terrace",
+      "Modern kitchen with breakfast counter",
+      "Master suite with walk-in closet",
+      "Covered parking for 2 cars",
+      "Premium wood flooring",
+      "Energy-efficient lighting"
+    ],
+    gallery: [
+      "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1448630360428-65456885c650?w=800&h=600&fit=crop"
+    ]
+  },
+ {
+    id: 5,
+    title:'keshav enclave nandanwan',
+    location: ' Nandanwan, Nagpur',
+    area: "3BHK",
+    type: "Residential",
+    status: "Completed",
+    image: 'https://ashishconstruction.in/wp-content/uploads/2021/09/keshav-enclave-nandanwan.jpg',
+    description: 'Residential facility with advanced infrastructure and safety systems.',
+    fullDescription: "This elegant duplex home combines traditional charm with modern conveniences across 2800 sq ft of thoughtfully designed space. The ground floor features an open living area, modern kitchen, and guest bedroom, while the upper level houses the master suite and additional bedrooms. The property includes a private garden, covered parking, and premium finishes throughout.",
+    features: [
+      "Duplex design with 3 bedrooms",
+      "Open-plan ground floor",
+      "Private garden and terrace",
+      "Modern kitchen with breakfast counter",
+      "Master suite with walk-in closet",
+      "Covered parking for 2 cars",
+      "Premium wood flooring",
+      "Energy-efficient lighting"
+    ],
+    gallery: [
+      "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1448630360428-65456885c650?w=800&h=600&fit=crop"
+    ]
+  },  
+{
+    id: 6,
+    title: 'Prajakta cross Winds',
+    location: "Hingana Road, Nagpur",
+    area: "3BHK",
+    type: "Residential",
+    status: "Completed",
+    image: '	https://ashishconstruction.in/wp-content/uploads/2021/08/PRAJAKTA-CROSSWIND-HINGANA-ROAD.jpg',
     description: "Spacious duplex with garden and parking facility.",
     fullDescription: "This elegant duplex home combines traditional charm with modern conveniences across 2800 sq ft of thoughtfully designed space. The ground floor features an open living area, modern kitchen, and guest bedroom, while the upper level houses the master suite and additional bedrooms. The property includes a private garden, covered parking, and premium finishes throughout.",
     features: [
@@ -95,18 +165,241 @@ export const projectsData = [
   },
 
   
+
+{
+    id: 7,
+    title: 'Prajakta Prabhakamal',
+    location: " Nagpur",
+    area: "3BHK",
+    type: "Residential",
+    status: "Completed",
+    image: 'https://ashishconstruction.in/wp-content/uploads/2021/08/IMG-20160212-WA0009.jpg',
+    description: "Spacious duplex with garden and parking facility.",
+    fullDescription: "This elegant duplex home combines traditional charm with modern conveniences across 2800 sq ft of thoughtfully designed space. The ground floor features an open living area, modern kitchen, and guest bedroom, while the upper level houses the master suite and additional bedrooms. The property includes a private garden, covered parking, and premium finishes throughout.",
+    features: [
+      "Duplex design with 3 bedrooms",
+      "Open-plan ground floor",
+      "Private garden and terrace",
+      "Modern kitchen with breakfast counter",
+      "Master suite with walk-in closet",
+      "Covered parking for 2 cars",
+      "Premium wood flooring",
+      "Energy-efficient lighting"
+    ],
+    gallery: [
+      "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1448630360428-65456885c650?w=800&h=600&fit=crop"
+    ]
+  },
+
+  
+
+{
+    id: 8,
+    title: 'Prajakta Orchid',
+    location: "Pandey Layout, Nagpur",
+    area: "3BHK",
+    type: "Residential",
+    status: "Completed",
+    image:'https://ashishconstruction.in/wp-content/uploads/2021/08/PRAJAKTA-ORCHID-PANDEY-LAYOUT.jpg',
+    description: "Spacious duplex with garden and parking facility.",
+    fullDescription: "This elegant duplex home combines traditional charm with modern conveniences across 2800 sq ft of thoughtfully designed space. The ground floor features an open living area, modern kitchen, and guest bedroom, while the upper level houses the master suite and additional bedrooms. The property includes a private garden, covered parking, and premium finishes throughout.",
+    features: [
+      "Duplex design with 3 bedrooms",
+      "Open-plan ground floor",
+      "Private garden and terrace",
+      "Modern kitchen with breakfast counter",
+      "Master suite with walk-in closet",
+      "Covered parking for 2 cars",
+      "Premium wood flooring",
+      "Energy-efficient lighting"
+    ],
+    gallery: [
+      "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1448630360428-65456885c650?w=800&h=600&fit=crop"
+    ]
+  },
+
+  
+
+{
+    id: 9,
+    title: 'Uttam Apartment',
+    location: "Nandanwan, Nagpur",
+    area: "3BHK",
+    type: "Residential",
+    status: "Completed",
+    image: 'https://ashishconstruction.in/wp-content/uploads/2021/09/uttam-apartment-nandanwan.jpg',
+    description: "Spacious duplex with garden and parking facility.",
+    fullDescription: "This elegant duplex home combines traditional charm with modern conveniences across 2800 sq ft of thoughtfully designed space. The ground floor features an open living area, modern kitchen, and guest bedroom, while the upper level houses the master suite and additional bedrooms. The property includes a private garden, covered parking, and premium finishes throughout.",
+    features: [
+      "Duplex design with 3 bedrooms",
+      "Open-plan ground floor",
+      "Private garden and terrace",
+      "Modern kitchen with breakfast counter",
+      "Master suite with walk-in closet",
+      "Covered parking for 2 cars",
+      "Premium wood flooring",
+      "Energy-efficient lighting"
+    ],
+    gallery: [
+      "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1448630360428-65456885c650?w=800&h=600&fit=crop"
+    ]
+  },
+
+  
+
+{
+    id: 10,
+    title:'Ashish Annex',
+    location: " Nagpur",
+    area: "3BHK",
+    type: "Residential",
+    status: "Completed",
+    image:'https://ashishconstruction.in/wp-content/uploads/2021/09/IMG_20210930_134037-1-min-scaled.jpg',
+    description: "Spacious duplex with garden and parking facility.",
+    fullDescription: "This elegant duplex home combines traditional charm with modern conveniences across 2800 sq ft of thoughtfully designed space. The ground floor features an open living area, modern kitchen, and guest bedroom, while the upper level houses the master suite and additional bedrooms. The property includes a private garden, covered parking, and premium finishes throughout.",
+    features: [
+      "Duplex design with 3 bedrooms",
+      "Open-plan ground floor",
+      "Private garden and terrace",
+      "Modern kitchen with breakfast counter",
+      "Master suite with walk-in closet",
+      "Covered parking for 2 cars",
+      "Premium wood flooring",
+      "Energy-efficient lighting"
+    ],
+    gallery: [
+      "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1448630360428-65456885c650?w=800&h=600&fit=crop"
+    ]
+  },
+
+  
+
+{
+    id: 11,
+    title: 'Sai Bhushan',
+    location: "Swalambai Nagar, Nagpur",
+    area: "3BHK",
+    type: "Residential",
+    status: "Completed",
+    image: 'https://ashishconstruction.in/wp-content/uploads/2021/09/SAI-BHUSAN-SWALAMBI-NAGAR.jpg',
+    description: "Spacious duplex with garden and parking facility.",
+    fullDescription: "This elegant duplex home combines traditional charm with modern conveniences across 2800 sq ft of thoughtfully designed space. The ground floor features an open living area, modern kitchen, and guest bedroom, while the upper level houses the master suite and additional bedrooms. The property includes a private garden, covered parking, and premium finishes throughout.",
+    features: [
+      "Duplex design with 3 bedrooms",
+      "Open-plan ground floor",
+      "Private garden and terrace",
+      "Modern kitchen with breakfast counter",
+      "Master suite with walk-in closet",
+      "Covered parking for 2 cars",
+      "Premium wood flooring",
+      "Energy-efficient lighting"
+    ],
+    gallery: [
+      "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1448630360428-65456885c650?w=800&h=600&fit=crop"
+    ]
+  },
+
+  {
+    id: 12,
+    title: 'DMA Harmony',
+    location: "Pune",
+    area: "3BHK",
+    type: "Residential",
+    status: "Completed",
+    image: 'https://ashishconstruction.in/wp-content/uploads/2021/09/DMA-HORMONEY-PUNE.jpg',
+    description: "Spacious duplex with garden and parking facility.",
+    fullDescription: "This elegant duplex home combines traditional charm with modern conveniences across 2800 sq ft of thoughtfully designed space. The ground floor features an open living area, modern kitchen, and guest bedroom, while the upper level houses the master suite and additional bedrooms. The property includes a private garden, covered parking, and premium finishes throughout.",
+    features: [
+      "Duplex design with 3 bedrooms",
+      "Open-plan ground floor",
+      "Private garden and terrace",
+      "Modern kitchen with breakfast counter",
+      "Master suite with walk-in closet",
+      "Covered parking for 2 cars",
+      "Premium wood flooring",
+      "Energy-efficient lighting"
+    ],
+    gallery: [
+      "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1448630360428-65456885c650?w=800&h=600&fit=crop"
+    ]
+  },
+    {
+    id: 13,
+    title: 'Sai Vatika Layout',
+    location: "Nagpur",
+    area: "3BHK",
+    type: "Residential",
+    status: "Completed",
+    image:'https://ashishconstruction.in/wp-content/uploads/2021/09/IMG_20210930_133751-min-rotated.jpg',
+    description: "Spacious duplex with garden and parking facility.",
+    fullDescription: "This elegant duplex home combines traditional charm with modern conveniences across 2800 sq ft of thoughtfully designed space. The ground floor features an open living area, modern kitchen, and guest bedroom, while the upper level houses the master suite and additional bedrooms. The property includes a private garden, covered parking, and premium finishes throughout.",
+    features: [
+      "Duplex design with 3 bedrooms",
+      "Open-plan ground floor",
+      "Private garden and terrace",
+      "Modern kitchen with breakfast counter",
+      "Master suite with walk-in closet",
+      "Covered parking for 2 cars",
+      "Premium wood flooring",
+      "Energy-efficient lighting"
+    ],
+    gallery: [
+      "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1448630360428-65456885c650?w=800&h=600&fit=crop"
+    ]
+  },
+    {
+    id: 14,
+    title: 'Prajakta Gardens',
+    location: "Nagpur",
+    area: "3BHK",
+    type: "Residential",
+    status: "Completed",
+    image: 'https://ashishconstruction.in/wp-content/uploads/2021/09/DMA-HORMONEY-PUNE.jpg',
+    description: "Spacious duplex with garden and parking facility.",
+    fullDescription: "This elegant duplex home combines traditional charm with modern conveniences across 2800 sq ft of thoughtfully designed space. The ground floor features an open living area, modern kitchen, and guest bedroom, while the upper level houses the master suite and additional bedrooms. The property includes a private garden, covered parking, and premium finishes throughout.",
+    features: [
+      "Duplex design with 3 bedrooms",
+      "Open-plan ground floor",
+      "Private garden and terrace",
+      "Modern kitchen with breakfast counter",
+      "Master suite with walk-in closet",
+      "Covered parking for 2 cars",
+      "Premium wood flooring",
+      "Energy-efficient lighting"
+    ],
+    gallery: [
+      "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1448630360428-65456885c650?w=800&h=600&fit=crop"
+    ]
+  },
+  
+
 ];
 
 export const currentProjectsData = [
   {
-    id: 7,
+    id: 15,
     title: "3BHK Luxurious Prajakta Park",
     location: "Abhyankar Nagar, Nagpur",
     type: "Residential",
     status: "In Progress",
     image: "https://madhuprabhaconstructions.in/images/building.jfif",
-    description: "A 5 level 3BHK luxurious park view apartment located in the lap of nature. A peaceful location in the heart of the city where you can enjoy your mornings with blissful greenery. A Perfect Home with Modern Amenities at Abhyankar Nagar, Nagpur.",
-    
+    description: "A 5 level 3BHK luxurious park view apartment located in the lap of nature. A peaceful location in the heart of the city where you can enjoy your mornings with blissful greenery. A Perfect Home with Modern Amenities at Abhyankar Nagar, Nagpur.",    
     fullDescription: "Currently under construction, this prestigious 5-floor luxury apartment complex will feature 40 premium units with breathtaking city views. The project includes a sky lounge, infinity pool, fitness center, and landscaped gardens. Each apartment is designed with premium finishes and smart home features.",
     features: [
       "40 luxury apartments (2-4 BHK)",
@@ -124,7 +417,7 @@ export const currentProjectsData = [
     ]
   },
   {
-    id: 8,
+    id: 16,
     title: "3BHK Luxurious Prajakta La-Masion",
     location: "Nagpur", 
     type: "Residential",
@@ -301,5 +594,6 @@ export const contactData = {
   phone1: "+91 98224 74211",
   phone2: "+91 95229 01659",
   email: "info@madhuprabhaconstructions.in",
-  googleMapsUrl: "https://www.google.com/maps/place/UMA+Apartment,+Tilak+Road,+Mahal,+Nagpur"
+  googleMapsUrl: "https://www.google.com/maps/place/UMA+Apartment,+Tilak+Road,+Mahal,+Nagpur",
+  workingHours : "Mon - Sat: 9:00 AM - 6:00 PM",
 };

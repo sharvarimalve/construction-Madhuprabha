@@ -114,7 +114,7 @@ const Navbar = () => {
             </Link>
 
             {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center space-x-2">
+            <div className="hidden lg:flex items-center space-x-2">
               {navItems.map((item, index) => {
                 const Icon = item.icon;
                 return (
@@ -155,7 +155,7 @@ const Navbar = () => {
             </div>
 
             {/* CTA Button */}
-            <div className="hidden md:block relative z-10">
+            <div className="hidden lg:block relative z-10">
               <Link
                 to="/contact"
                 className="group relative px-5 py-2 font-semibold rounded-[50px] overflow-hidden transition-all duration-500 transform hover:scale-105"
@@ -174,7 +174,7 @@ const Navbar = () => {
             </div>
 
             {/* Mobile menu button */}
-            <div className="md:hidden relative z-10">
+            <div className="lg:hidden relative z-10">
               <button
                 onClick={() => setIsOpen(!isOpen)}
                 className="group p-3 rounded-xl bg-slate-800/50 backdrop-blur-sm border border-slate-600/30 text-slate-200 hover:bg-slate-700/50 hover:text-amber-300 transition-all duration-300"
@@ -191,8 +191,8 @@ const Navbar = () => {
           </div>
 
           {/* Mobile Navigation */}
-          <div className={`md:hidden transition-all duration-500 overflow-hidden ${
-            isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+          <div className={`lg:hidden transition-all duration-500 overflow-hidden ${
+            isOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'
           }`}>
             <div className="py-6 mt-4 space-y-3 bg-gradient-to-br from-slate-900/95 via-slate-800/95 to-slate-700/95 backdrop-blur-xl rounded-3xl shadow-2xl border border-slate-600/30">
               {navItems.map((item, index) => {

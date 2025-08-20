@@ -5,9 +5,9 @@ import { contactData } from '../mockData';
 
 const ContactSection = () => {
   const contactMethods = [
-    { icon: Phone, title: "Call Us", detail: contactData.phone1, secondDetail: contactData.phone2, color: "from-blue-500 to-cyan-600" },
-    { icon: Mail, title: "Email Us", detail: contactData.email, color: "from-emerald-500 to-green-600" },
-    { icon: MapPin, title: "Visit Us", detail: contactData.address, link: contactData.googleMapsUrl, color: "from-purple-500 to-violet-600" }
+    { icon: Phone, title: "Call Us", detail: contactData.phone1, secondDetail: contactData.phone2, link: `tel:${contactData.phone1}`, secondLink: `tel:${contactData.phone2}`, color: "from-blue-500 to-cyan-600" },
+    { icon: Mail, title: "Email Us", detail: contactData.email, link: `mailto:${contactData.email}`, color: "from-emerald-500 to-green-600" },
+    { icon: MapPin, title: "Visit Us", detail: contactData.address, link: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(contactData.address)}`, color: "from-purple-500 to-violet-600" }
   ];
 
   return (
@@ -44,6 +44,38 @@ const ContactSection = () => {
 
         
 
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+          {contactMethods.map((method, index) => {
+            const Icon = method.icon;
+            return (
+              <div key={index} className="group text-center p-8 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-amber-200 transform hover:-translate-y-2">
+                <div className={`w-16 h-16 bg-gradient-to-r ${method.color} rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
+                  <Icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-slate-900 mb-3">{method.title}</h3>
+                {method.link ? (
+                  <p className="text-slate-700 font-medium mb-2">
+                    <a href={method.link} target={method.title === "Visit Us" ? "_blank" : "_self"} rel="noopener noreferrer" className="hover:text-amber-600 transition-colors duration-300">
+                      {method.detail}
+                    </a>
+                    {method.secondDetail && method.secondLink && (
+                      <>
+                        <br />
+                        <a href={method.secondLink} className="hover:text-amber-600 transition-colors duration-300">
+                          {method.secondDetail}
+                        </a>
+                      </>
+                    )}
+                  </p>
+                ) : (
+                  <p className="text-slate-700 font-medium mb-2">{method.detail}</p>
+                )}
+                <p className="text-sm text-slate-500">{method.description}</p>
+              </div>
+            );
+          })}
+        </div>
 
         {/* CTA Section */}
         <div className="mt-20 text-center">

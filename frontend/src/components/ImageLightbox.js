@@ -1,10 +1,13 @@
 import React from 'react';
 import { X, ChevronLeft, ChevronRight } from 'lucide-react';
+import useScrollLock from '../hooks/use-scroll-lock'; // Import the new hook
 
 const ImageLightbox = ({ images, currentIndex, isOpen, onClose, onNext, onPrev, onSelect }) => {
   if (!isOpen || !images || images.length === 0) return null;
 
   const currentImage = images[currentIndex];
+
+  useScrollLock(isOpen); // Use the new hook here
 
   const handleKeyDown = (e) => {
     if (e.key === 'Escape') onClose();
@@ -15,18 +18,7 @@ const ImageLightbox = ({ images, currentIndex, isOpen, onClose, onNext, onPrev, 
   React.useEffect(() => {
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown);
-  }, []);
-
-  React.useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'auto';
-    }
-    return () => {
-      document.body.style.overflow = 'auto';
-    };
-  }, [isOpen]);
+  }, [handleKeyDown]);
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center">

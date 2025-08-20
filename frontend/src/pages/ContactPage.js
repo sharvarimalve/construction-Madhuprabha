@@ -44,7 +44,7 @@ const ContactPage = () => {
   const projectTypes = [
     'Villa Construction',
     'Apartment Building',
-    'Duplex Home', 
+    'Duplex Home',
     'Row Houses',
     'Home Renovation',
     'Other'
@@ -63,7 +63,7 @@ const ContactPage = () => {
     {
       icon: Phone,
       title: "Call Us",
-      detail: contactData.phone,
+      detail: contactData.phone1,
       description: "Speak directly with our team",
       color: "from-blue-500 to-blue-600"
     },
@@ -100,9 +100,6 @@ const ContactPage = () => {
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-orange-500/20 to-red-600/20 backdrop-blur-sm border border-orange-500/30 rounded-full mb-6">
-            <span className="text-orange-400 font-semibold text-sm uppercase tracking-wider">Contact Us</span>
-          </div>
           <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-6">
             <span className="bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">
               Let's Build
@@ -140,7 +137,18 @@ const ContactPage = () => {
                     <Icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">{method.title}</h3>
-                  <p className="text-gray-700 font-medium mb-2">{method.detail}</p>
+                  {method.title === "Call Us" && (
+                    <a href={`tel:${method.detail}`} className="text-gray-700 font-medium mb-2 hover:text-orange-600 transition-colors duration-300">{method.detail}</a>
+                  )}
+                  {method.title === "Email Us" && (
+                    <a href={`mailto:${method.detail}`} className="text-gray-700 font-medium mb-2 hover:text-orange-600 transition-colors duration-300 break-words text-sm">{method.detail}</a>
+                  )}
+                  {method.title === "Visit Our Office" && (
+                    <a href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(method.detail)}`} target="_blank" rel="noopener noreferrer" className="text-gray-700 font-medium mb-2 hover:text-orange-600 transition-colors duration-300">{method.detail}</a>
+                  )}
+                  {method.title === "Working Hours" && (
+                    <p className="text-gray-700 font-medium mb-2">{method.detail}</p>
+                  )}
                   <p className="text-sm text-gray-500">{method.description}</p>
                 </div>
               );
@@ -311,20 +319,26 @@ const ContactPage = () => {
             <div className="space-y-8">
               {/* Office Map */}
               <div className="relative bg-gray-200 rounded-2xl overflow-hidden shadow-xl h-96">
-                <div className="absolute inset-0 bg-gradient-to-br from-orange-400/20 to-red-500/20"></div>
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center text-gray-600">
-                    <Building2 className="w-16 h-16 mx-auto mb-4 text-orange-500" />
-                    <p className="font-semibold text-lg">Our Office Location</p>
-                    <p className="text-sm mt-2 max-w-sm">{contactData.address}</p>
-                  </div>
-                </div>
-                
-                {/* Location Pin */}
+                {/* Map Embed */}
+                <iframe
+                  title="office-location"
+                  src="https://www.google.com/maps?q=UMA+Apartment,+Behind+Binzani+Book+Depot,+Tilak+Road,+Mahal,+Nagpur-2&output=embed"
+                  className="absolute inset-0 w-full h-full border-0"
+                  allowFullScreen=""
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                ></iframe>
+
+                {/* Gradient Overlay (optional, agar map par halka effect chahiye to) */}
+                <div className="absolute inset-0 bg-gradient-to-br from-orange-400/10 to-red-500/10 pointer-events-none"></div>
+
+                {/* Map Center Pin */}
                 <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                  <div className="w-8 h-8 bg-red-500 rounded-full border-4 border-white shadow-lg animate-pulse"></div>
+                  <div className="w-6 h-6 bg-red-500 rounded-full border-4 border-white shadow-lg animate-ping"></div>
+                  <div className="w-6 h-6 bg-red-500 rounded-full border-4 border-white shadow-lg absolute top-0 left-0"></div>
                 </div>
               </div>
+
 
               {/* Office Details Card */}
               <div className="bg-gradient-to-br from-orange-500 to-red-600 text-white rounded-2xl p-8 shadow-xl">
@@ -334,7 +348,7 @@ const ContactPage = () => {
                     <MapPin className="w-6 h-6 mt-1 text-orange-200 flex-shrink-0" />
                     <div>
                       <p className="font-medium text-orange-100">Address</p>
-                      <p className="text-sm text-white/90">{contactData.address}</p>
+                      <a href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(contactData.address)}`} target="_blank" rel="noopener noreferrer" className="text-sm text-white/90 hover:text-orange-200 transition-colors duration-300">{contactData.address}</a>
                     </div>
                   </div>
                   <div className="flex items-start space-x-3">
@@ -348,7 +362,7 @@ const ContactPage = () => {
                     <Phone className="w-6 h-6 mt-1 text-orange-200 flex-shrink-0" />
                     <div>
                       <p className="font-medium text-orange-100">Phone</p>
-                      <p className="text-sm text-white/90">{contactData.phone}</p>
+                      <a href={`tel:${contactData.phone}`} className="text-sm text-white/90 hover:text-orange-200 transition-colors duration-300">{contactData.phone}</a>
                     </div>
                   </div>
                 </div>

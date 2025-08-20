@@ -48,65 +48,6 @@ const ProjectsPage = () => {
           </p>
         </div>
       </section>
-
-      {/* Filters & Controls */}
-      <section className="py-12 bg-white border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center space-y-6 lg:space-y-0">
-            {/* Filters */}
-            {/* <div className="flex flex-wrap items-center gap-4">
-              <div className="flex items-center space-x-2">
-                <Filter className="w-5 h-5 text-gray-500" />
-                <span className="text-sm font-medium text-gray-700">Filter by:</span>
-              </div>
-              <div className="flex flex-wrap gap-2">
-                {projectTypes.map(type => (
-                  <button
-                    key={type}
-                    onClick={() => setFilter(type)}
-                    className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
-                      filter === type
-                        ? 'bg-gradient-to-r from-orange-500 to-red-600 text-white shadow-lg'
-                        : 'bg-gray-100 text-gray-700 hover:bg-orange-50 hover:text-orange-600'
-                    }`}
-                  >
-                    {type === 'all' ? 'All Projects' : type}
-                  </button>
-                ))}
-              </div>
-            </div> */}
-
-            {/* Sort & View Controls */}
-            <div className="flex items-center space-x-4">
-             
-
-              <div className="flex bg-gray-100 rounded-lg p-1">
-                <button
-                  onClick={() => setViewMode('grid')}
-                  className={`p-2 rounded-md transition-colors duration-300 ${
-                    viewMode === 'grid' ? 'bg-white shadow-sm text-orange-600' : 'text-gray-500 hover:text-gray-700'
-                  }`}
-                >
-                  <Grid className="w-5 h-5" />
-                </button>
-                <button
-                  onClick={() => setViewMode('list')}
-                  className={`p-2 rounded-md transition-colors duration-300 ${
-                    viewMode === 'list' ? 'bg-white shadow-sm text-orange-600' : 'text-gray-500 hover:text-gray-700'
-                  }`}
-                >
-                  <List className="w-5 h-5" />
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <div className="mt-4 flex items-center justify-between text-sm text-gray-600">
-            <span>{sortedProjects.length} projects found</span>
-          </div>
-        </div>
-      </section>
-
       {/* Projects Grid */}
       <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -155,10 +96,6 @@ const ProjectsPage = () => {
                       <div className="flex items-center text-gray-600 text-sm">
                         <Home className="w-4 h-4 mr-2 text-orange-500 flex-shrink-0" />
                         <span>{project.area} • {project.type}</span>
-                      </div>
-                      <div className="flex items-center text-gray-600 text-sm">
-                        <Calendar className="w-4 h-4 mr-2 text-orange-500 flex-shrink-0" />
-                        <span>Completed: {project.completionDate}</span>
                       </div>
                     </div>
 

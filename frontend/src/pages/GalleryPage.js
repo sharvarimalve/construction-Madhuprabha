@@ -2,15 +2,21 @@ import React, { useState } from 'react';
 import { Image as ImageIcon, Video, Play, ExternalLink, Grid, List, Search, Filter, X } from 'lucide-react';
 import { galleryImages, galleryVideos } from '../mockData';
 import Footer from '../components/Footer';
+import ImageLightbox from '../components/ImageLightbox'; // Import ImageLightbox
+// import useScrollLock from '../hooks/use-scroll-lock'; // Import useScrollLock
 
 const GalleryPage = () => {
   const [activeTab, setActiveTab] = useState('all');
   const [viewMode, setViewMode] = useState('grid');
   const [searchTerm, setSearchTerm] = useState('');
   const [activeVideo, setActiveVideo] = useState(null);
+  const [selectedImageIndex, setSelectedImageIndex] = useState(-1); // New state for lightbox
+
+  // Use the custom hook to manage body scroll based on lightbox or video state
+  // useScrollLock(activeVideo !== null || selectedImageIndex !== -1);
 
   React.useEffect(() => {
-    if (activeVideo) {
+    if (activeVideo !== null || selectedImageIndex !== -1) {
       document.body.style.overflow = 'hidden';
     } else {
       document.body.style.overflow = 'auto';
@@ -18,7 +24,7 @@ const GalleryPage = () => {
     return () => {
       document.body.style.overflow = 'auto';
     };
-  }, [activeVideo]);
+  }, [activeVideo, selectedImageIndex]);
 
   const allGalleryItems = [
     ...galleryImages.map(item => ({ ...item, category: 'image' })),
@@ -83,46 +89,7 @@ const GalleryPage = () => {
                   </button>
                 );
               })}
-            </div>
-
-            {/* Search & View Controls */}
-            <div className="flex items-center space-x-4 w-full lg:w-auto">
-              {/* Search */}
-              <div className="relative flex-1 lg:flex-initial">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                <input
-                  type="text"
-                  placeholder="Search gallery..."
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full lg:w-64 pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent outline-none"
-                />
-              </div>
-
-              {/* View Mode Toggle */}
-              <div className="flex bg-gray-100 rounded-lg p-1">
-                <button
-                  onClick={() => setViewMode('grid')}
-                  className={`p-2 rounded-md transition-colors duration-300 ${
-                    viewMode === 'grid' ? 'bg-white shadow-sm text-orange-600' : 'text-gray-500 hover:text-gray-700'
-                  }`}
-                >
-                  <Grid className="w-5 h-5" />
-                </button>
-                <button
-                  onClick={() => setViewMode('masonry')}
-                  className={`p-2 rounded-md transition-colors duration-300 ${
-                    viewMode === 'masonry' ? 'bg-white shadow-sm text-orange-600' : 'text-gray-500 hover:text-gray-700'
-                  }`}
-                >
-                  <Filter className="w-5 h-5" />
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <div className="mt-4 text-sm text-gray-600">
-            {filteredItems.length} items found
+            </div>            
           </div>
         </div>
       </section>
@@ -188,7 +155,9 @@ const GalleryPage = () => {
                     {/* Action Button for Images */}
                     {item.category === 'image' && (
                       <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        <button className="p-3 bg-white/20 backdrop-blur-sm border border-white/30 text-white rounded-full hover:bg-white/30 transform hover:scale-110 transition-all duration-300">
+                        <button 
+                          onClick={() => setSelectedImageIndex(galleryImages.findIndex(image => image.id === item.id))} // Open lightbox
+                          className="p-3 bg-white/20 backdrop-blur-sm border border-white/30 text-white rounded-full hover:bg-white/30 transform hover:scale-110 transition-all duration-300">
                           <ExternalLink className="w-6 h-6" />
                         </button>
                       </div>
@@ -257,7 +226,9 @@ const GalleryPage = () => {
 
                     {item.category === 'image' && (
                       <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        <button className="p-2 bg-white/20 backdrop-blur-sm border border-white/30 text-white rounded-full hover:bg-white/30 transform hover:scale-110 transition-all duration-300">
+                        <button 
+                          onClick={() => setSelectedImageIndex(galleryImages.findIndex(image => image.id === item.id))} // Open lightbox
+                          className="p-2 bg-white/20 backdrop-blur-sm border border-white/30 text-white rounded-full hover:bg-white/30 transform hover:scale-110 transition-all duration-300">
                           <ExternalLink className="w-5 h-5" />
                         </button>
                       </div>
@@ -287,6 +258,16 @@ const GalleryPage = () => {
       </section>
 
       <Footer />
+
+      {/* Image Lightbox */}
+      <ImageLightbox
+        images={galleryImages}
+        currentIndex={selectedImageIndex}
+        isOpen={selectedImageIndex !== -1}
+        onClose={() => setSelectedImageIndex(-1)}
+        onNext={() => setSelectedImageIndex(prev => (prev + 1) % galleryImages.length)}
+        onPrev={() => setSelectedImageIndex(prev => (prev - 1 + galleryImages.length) % galleryImages.length)}
+      />
     </div>
   );
 };
