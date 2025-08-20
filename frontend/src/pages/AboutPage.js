@@ -36,7 +36,7 @@ const AboutPage = () => {
 
   const teamMembers = [
     {
-      name: "Mr. Ashish Londe",
+      name: "Mr. Ashish Londhe",
       role: "Founder & Managing Director",
       experience: "19+ Years Experience",
       image: "/images/vikashsir.jpeg",
