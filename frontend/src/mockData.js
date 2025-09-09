@@ -3,12 +3,12 @@
 export const projectsData = [
   {
     id: 1,
-    title: "Prajakta Classic",
+    title: "Prajakta Park",
     location: "Abhyankar Nagar, Nagpur",
     area: "3BHK",
     type: "Residential",
     status: "Completed",
-    image: "https://madhuprabhaconstructions.in/images/prajktaclassic.png",
+    image: "https://madhuprabhaconstructions.in/images/prajakta classic3.jpg",
     description: "Premium residential project with modern amenities.",
     fullDescription: "This stunning luxury villa represents the pinnacle of contemporary residential design. Spanning 3500 sq ft, the property features an open-plan living concept with floor-to-ceiling windows that flood the interiors with natural light. The villa includes 4 spacious bedrooms, 3 full bathrooms, a modern kitchen with island, and a private garden with swimming pool. High-end finishes throughout include Italian marble flooring, custom millwork, and smart home automation systems. The project was completed on time and within budget, earning exceptional client satisfaction.",
     features: [
@@ -30,12 +30,12 @@ export const projectsData = [
   },
   {
     id: 2,
-    title: "PRAJAKTA PINNACLE",
+    title: "Madhuprabha Residency",
     location: "Telecom Nagar, Nagpur",
     area: "3BHK",
     type: "Residential",
     status: "Completed",
-    image: "https://madhuprabhaconstructions.in/images/PRAJAKTA-PINNACLE-TELECOM-NAGAR.jpg",
+    image: "https://madhuprabhaconstructions.in/images/prajkta green serenity1.jpeg",
     description: "25-unit premium apartment complex with modern amenities.",
     fullDescription: "A prestigious residential complex featuring 25 premium apartments designed for modern urban living. Each unit offers spacious layouts ranging from 1800 to 2400 sq ft, with high-quality finishes and contemporary design elements. The complex includes a clubhouse, fitness center, landscaped gardens, and 24/7 security. Located in the heart of Andheri East, residents enjoy excellent connectivity to business districts and entertainment hubs.",
     features: [
@@ -63,7 +63,7 @@ export const projectsData = [
     area: "3BHK",
     type: "Residential",
     status: "Completed",
-    image: "https://madhuprabhaconstructions.in/images/portfolio3.png",
+    image: "https://madhuprabhaconstructions.in/images/portfolio4.jpeg",
     description: "Spacious duplex with garden and parking facility.",
     fullDescription: "This elegant duplex home combines traditional charm with modern conveniences across 2800 sq ft of thoughtfully designed space. The ground floor features an open living area, modern kitchen, and guest bedroom, while the upper level houses the master suite and additional bedrooms. The property includes a private garden, covered parking, and premium finishes throughout.",
     features: [
