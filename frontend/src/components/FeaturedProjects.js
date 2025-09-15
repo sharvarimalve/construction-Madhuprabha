@@ -1,61 +1,69 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight, MapPin, Home, ExternalLink } from "lucide-react";
+import { object } from "zod";
 
-// अब यहीं data डाल रहे हैं
+
 const currentProjectsData = [
   {
     id: 1,
-    title: "Prajakta Park",
-    image: "/images/prajakta classic3.jpg",
+    title: "PRAJAKTA LA-MAISON",
+    image: "/images/secondProject.jpg",
     status: "Ongoing",
-    location: "Pune, Maharashtra",
-    area: "1200 sq.ft",
-    type: "2 BHK",
+    location: "Panday layout",
+    area: "2050 sq.ft - 2600 sq.ft",
+    type: "3 / 4 BHK - 7 floor",
+    types: "4",
     description:
-      "Modern 2 BHK apartments with premium amenities, landscaped gardens, and easy access to city hubs.",
+      "Modern 3 - 4 BHK apartments with premium amenities, landscaped gardens, and easy access to city hubs.",
+      brouchure:"Prajakta La Maison_Brochure(4) (2).pdf",
+
   },
   {
     id: 2,
-    title: "Madhuprabha Residency",
-    image: "/images/prajkta green serenity1.jpeg",
-    status: "Booking Open",
-    location: "Nagpur, Maharashtra",
-    area: "950 sq.ft",
-    type: "1 & 2 BHK",
+    title: "PRAJAKTA PARK",
+    image: "/images/HD PHOTO 1.jpg",
+    status: "Ongoing",
+    location: "Abhyankar Nagar Nagpur, Maharashtra",
+    area: "1800 sq.ft",
+    type: "3 BHK - 5 floor",
     description:
       "Affordable yet stylish flats with contemporary architecture and spacious interiors.",
+      brouchure:"Prajakta-Park-E-Brochure-New-1_compressed (1)(final).pdf",
   },
   {
     id: 3,
-    title: "Green Valley Homes",
-    image: "/images/portfolio4.jpeg",
-    status: "New Launch",
-    location: "Indore, MP",
-    area: "1500 sq.ft",
+    title: "PRAJAKTA CLASSIC",
+    image: "/images/park_img_page-0001.jpg ",
+    status: "Complete",
+    location: "Abhyankar Nagar,NAGPUR",
+    area: "2800 sq.ft",
     type: "3 BHK",
     description:
       "Luxurious 3 BHK apartments with eco-friendly design, solar power, and smart home features.",
+      brouchure:"Prajakta-Park-E-Brochure-New-1_compressed.pdf",
   },
   {
     id: 4,
-    title: "City Heights",
+    title: "PRAJAKTA GREEN SERENITY",
     image: "/images/PRAJAKTA-PINNACLE.jpg",
-    status: "Under Construction",
-    location: "Mumbai, Maharashtra",
+    status: "Complete",
+    location: "Madhav Nagar Near Nate Square, Nagpur",
     area: "1800 sq.ft",
-    type: "3 & 4 BHK",
+    type: "3 BHK",
     description:
       "Premium high-rise apartments with sea view, modern clubhouse, and world-class security.",
+      brouchure:"Green Serenity E-brochure..pdf",
+
   },
 ];
 
 const FeaturedProjects = () => {
-  // अब 4 cards दिखेंगे
+ 
   const featuredProjects = currentProjectsData.slice(0, 4);
 
   return (
-    <section className="py-16 lg:py-24 bg-white relative overflow-hidden">
+    <section className="py-16 lg:py-24 bg-gradient-to-br from-white via-red-50 to-red-100 relative overflow-hidden">
       {/* Subtle Red Background Glow */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-32 left-10 w-60 h-60 bg-red-100/40 rounded-full blur-3xl animate-pulse" />
@@ -67,7 +75,7 @@ const FeaturedProjects = () => {
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold mb-4 leading-tight">
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-red-700 via-red-600 to-red-500">
-              Current Projects
+              Our Projects
             </span>
           </h2>
           <p className="text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
@@ -138,7 +146,7 @@ const FeaturedProjects = () => {
                   </Link>
 
                   <a
-                    href="/images/Prajakta-Park-E-Brochure-New-1_compressed.pdf"
+                    href={`/images/${project.brouchure}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="group py-2 px-4 text-xs font-semibold rounded-xl border border-red-300 bg-white hover:bg-red-50 transition-all duration-300"

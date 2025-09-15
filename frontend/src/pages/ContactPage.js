@@ -67,7 +67,24 @@ const ContactPage = () => {
 
   return (
     <div className="min-h-screen bg-white text-gray-900">
+ <section 
+        className="relative pt-28 pb-20 text-white overflow-hidden"
+        style={{
+          backgroundImage: "url('/images/contact image.jpg')",
+          backgroundSize: "100% 100%",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          height: '60vh',
+        }}
+      >
+        {/* White blur lights */}
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute top-10 sm:top-20 right-10 sm:right-20 w-48 sm:w-96 h-48 sm:h-96 bg-white rounded-full blur-2xl"></div>
+          <div className="absolute bottom-10 sm:bottom-20 left-10 sm:left-20 w-40 sm:w-64 h-40 sm:h-64 bg-white rounded-full blur-2xl"></div>
+        </div>
 
+       
+      </section>
 
       {/* Contact Methods */}
       <section className="py-20 bg-white mt-5">

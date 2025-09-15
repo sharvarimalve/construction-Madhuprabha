@@ -3,41 +3,41 @@
 export const projectsData = [
   {
     id: 1,
-    title: "Prajakta Park",
-    location: "Abhyankar Nagar, Nagpur",
-    area: "3BHK",
+    title: "PRAJAKTA LA-MAISON",
+    location: "Panday Layout",
+    area: "3BHK - 7 floor",
     type: "Residential",
-    status: "Completed",
-    image: "https://madhuprabhaconstructions.in/images/prajakta classic3.jpg",
-    description: "Premium residential project with modern amenities.",
-    fullDescription: "This stunning luxury villa represents the pinnacle of contemporary residential design. Spanning 3500 sq ft, the property features an open-plan living concept with floor-to-ceiling windows that flood the interiors with natural light. The villa includes 4 spacious bedrooms, 3 full bathrooms, a modern kitchen with island, and a private garden with swimming pool. High-end finishes throughout include Italian marble flooring, custom millwork, and smart home automation systems. The project was completed on time and within budget, earning exceptional client satisfaction.",
+    status: "Ongoing",
+    image: "/images/secondProject.jpg",
+    description: "A Gold Certified Green Building!",
+    fullDescription: "Introducing ‘PRAJAKTA La-Masion’, our 7 level 3BHK luxurious view apartment located in the lap of nature. A peaceful location in the heart of the city where you can enjoy your mornings with blissful greenery.A Perfect Home with Modern Amenities at Nagpur.",
     features: [
-      "4 Bedrooms with en-suite bathrooms",
-      "Open-plan living and dining area", 
-      "Modern kitchen with premium appliances",
-      "Private swimming pool and garden",
-      "Smart home automation system",
-      "Italian marble flooring",
-      "Floor-to-ceiling windows",
+      "Seamless Connectivity - Only a 5-minute drive to the airport",
+      "Unbeatable Location - Just steps away from the city's most vibrant hotspot (Radisson Blue Square, Wardha Road), surrounded by malls, pubs, theaters, and metro stations.", 
+      "Luxury at Your Doorstep - Walk to 5-star hotels like Radisson and the upcoming Taj in just 5 minutes.",
+      "Shop with Ease - Enjoy walking-distance access to Westside, Pantaloons, Trends, Sketchers, and more.",
+      "Lifestyle & Leisure - Fine-dine restaurants and lush gardens, all within a 5-minute walk.",
+      "Architectural Elegance - A modern European/Frenchthemed project with a majestic grand lobby on the ground floor.",
+     
       "2-car covered parking"
     ],
     gallery: [
-      "https://ashishconstruction.in/wp-content/uploads/2025/05/IMG-20250514-WA0045.jpg",
-      "https://ashishconstruction.in/wp-content/uploads/2025/05/IMG-20250514-WA0040-Copy.jpg",
-      "https://ashishconstruction.in/wp-content/uploads/2025/05/IMG-20250514-WA0039-Copy.jpg",
-      "https://ashishconstruction.in/wp-content/uploads/2025/05/IMG-20250514-WA0044-Copy.jpg",
+      "/images/WhatsApp Image 2025-09-12 at 18.03.50_78df2fe0.jpg",
+      "/images/WhatsApp Image 2025-09-12 at 18.06.20_682b0c0f.jpg",
+      "/images/WhatsApp Image 2025-09-12 at 18.11.30_7760acc8.jpg",
+      "/images/WhatsApp Image 2025-09-12 at 18.13.45_fc091e08.jpg",
     ]
   },
   {
     id: 2,
-    title: "Madhuprabha Residency",
-    location: "Telecom Nagar, Nagpur",
-    area: "3BHK",
+    title: "PRAJAKTA PARK",
+    location: "Abhyankar nagar, Nagpur",
+    area: "3BHK - 5 floor",
     type: "Residential",
-    status: "Completed",
-    image: "https://madhuprabhaconstructions.in/images/prajkta green serenity1.jpeg",
-    description: "25-unit premium apartment complex with modern amenities.",
-    fullDescription: "A prestigious residential complex featuring 25 premium apartments designed for modern urban living. Each unit offers spacious layouts ranging from 1800 to 2400 sq ft, with high-quality finishes and contemporary design elements. The complex includes a clubhouse, fitness center, landscaped gardens, and 24/7 security. Located in the heart of Andheri East, residents enjoy excellent connectivity to business districts and entertainment hubs.",
+    status: "Ongoing",
+    image: "/images/HD PHOTO 1.jpg",
+    description: "Prajakta Park – A perfect harmony of nature, comfort, and modern living..",
+    fullDescription: "PRAJAKTA PARK – A thoughtfully designed residential project that blends nature with modern living. Prajakta Park offers spacious homes surrounded by greenery, ensuring peace and comfort in every corner. With premium amenities, excellent connectivity, and a vibrant community, it is the perfect place to create memories and celebrate life every day.",
     features: [
       "25 premium apartments",
       "2-3 BHK configurations",
@@ -49,21 +49,23 @@ export const projectsData = [
       "High-speed elevator access"
     ],
     gallery: [
-      "https://ashishconstruction.in/wp-content/uploads/2021/08/4-min-3.jpg",
-      "https://ashishconstruction.in/wp-content/uploads/2021/08/3-min-3.jpg",
-      "https://ashishconstruction.in/wp-content/uploads/2021/08/2-min-4.jpg",
-      "https://ashishconstruction.in/wp-content/uploads/2021/08/1-min-3.jpg",
-      "https://ashishconstruction.in/wp-content/uploads/2021/08/7-min-4.jpg"
+      "/images/Prajakta-Classic-E-Brochure-09-13-2025_07_46_AM (1).png",
+      "/images/Prajakta-Classic-E-Brochure-09-13-2025_07_46_AM.png",
+      "/images/Prajakta-Classic-E-Brochure-09-13-2025_07_47_AM.png",
+      "/images/Prajakta-Classic-E-Brochure-09-13-2025_07_48_AM (1).png",
+      "/images/Prajakta-Classic-E-Brochure-09-13-2025_07_48_AM.png",
+      "/images/Prajakta-Classic-E-Brochure-09-13-2025_07_49_AM (1).png",
+      "/images/Prajakta-Classic-E-Brochure-09-13-2025_07_49_AM.png"
     ]
   },
   {
     id: 3,
-    title: "Prajakta Green Serenity",
-    location: "Madhav Nagar, Nagpur",
+    title: "PRAJAKTA CLASSIC ",
+    location: "Abhyankar Nagar, Nagpur",
     area: "3BHK",
     type: "Residential",
-    status: "Completed",
-    image: "https://madhuprabhaconstructions.in/images/portfolio4.jpeg",
+    status: "Complete",
+    image: "/images/park_img_page-0001.jpg ",
     description: "Spacious duplex with garden and parking facility.",
     fullDescription: "This elegant duplex home combines traditional charm with modern conveniences across 2800 sq ft of thoughtfully designed space. The ground floor features an open living area, modern kitchen, and guest bedroom, while the upper level houses the master suite and additional bedrooms. The property includes a private garden, covered parking, and premium finishes throughout.",
     features: [
@@ -84,17 +86,14 @@ export const projectsData = [
   },
   {
     id: 4,
-    title: 'Shopping Mall Construction',
-    location: 'Nagpur',
+    title: 'Prajakta Green Serenity',
+    location: 'Madhav Nagar Near Nate Square,Nagpur',
     area: "3BHK",
     type: "Residential",
-    status: "Completed",
-    image:'https://images.pexels.com/photos/1642125/pexels-photo-1642125.jpeg?auto=compress&cs=tinysrgb&w=600',
-    description: 'Large-scale retail complex with entertainment zones and parking facilities.',
-    fullDescription: `This ambitious shopping mall project in Noida is currently under construction and represents 
-      one of our largest Residential undertakings. The mall will feature multiple retail zones, entertainment areas, 
-      food courts, and extensive parking facilities. The design focuses on creating an engaging shopping experience 
-      while maintaining high standards of safety and accessibility.`,
+    status: "Complete",
+    image: "/images/portfolio3.png",
+    description: 'An expansive retail complex designed with modern entertainment zones and hassle-free parking solutions.',
+    fullDescription: `Madhuprabha Constructions – A trusted name in real estate for over two decades, Madhuprabha Constructions has been delivering projects that stand as symbols of trust, quality, and innovation. Now, adding another proud chapter to its journey, we present “Prajakta Green Serenity” – a home with a modern touch, where comfort meets elegance. Designed with thoughtful planning and premium amenities, it is not just a place to live, but a lifestyle crafted to celebrate every moment.`,
     features: [
       "Duplex design with 3 bedrooms",
       "Open-plan ground floor",
@@ -118,7 +117,7 @@ export const projectsData = [
     area: "3BHK",
     type: "Residential",
     status: "Completed",
-    image: 'https://ashishconstruction.in/wp-content/uploads/2021/09/keshav-enclave-nandanwan.jpg',
+    image: '/images/WhatsApp-Image-2021-09-20-at-4.55.37-PM.jpeg',
     description: 'Residential facility with advanced infrastructure and safety systems.',
     fullDescription: "This elegant duplex home combines traditional charm with modern conveniences across 2800 sq ft of thoughtfully designed space. The ground floor features an open living area, modern kitchen, and guest bedroom, while the upper level houses the master suite and additional bedrooms. The property includes a private garden, covered parking, and premium finishes throughout.",
     features: [
@@ -141,10 +140,10 @@ export const projectsData = [
     id: 6,
     title: 'Prajakta cross Winds',
     location: "Hingana Road, Nagpur",
-    area: "3BHK",
+    area: "2-3BHK",
     type: "Residential",
     status: "Completed",
-    image: '	https://ashishconstruction.in/wp-content/uploads/2021/08/PRAJAKTA-CROSSWIND-HINGANA-ROAD.jpg',
+    image: '/images/PRAJAKTA-CROSSWIND-HINGANA-ROAD.jpg',
     description: "Spacious duplex with garden and parking facility.",
     fullDescription: "This elegant duplex home combines traditional charm with modern conveniences across 2800 sq ft of thoughtfully designed space. The ground floor features an open living area, modern kitchen, and guest bedroom, while the upper level houses the master suite and additional bedrooms. The property includes a private garden, covered parking, and premium finishes throughout.",
     features: [
@@ -173,7 +172,7 @@ export const projectsData = [
     area: "3BHK",
     type: "Residential",
     status: "Completed",
-    image: 'https://ashishconstruction.in/wp-content/uploads/2021/08/IMG-20160212-WA0009.jpg',
+    image: '/images/IMG-20160212-WA0009.jpg',
     description: "Spacious duplex with garden and parking facility.",
     fullDescription: "This elegant duplex home combines traditional charm with modern conveniences across 2800 sq ft of thoughtfully designed space. The ground floor features an open living area, modern kitchen, and guest bedroom, while the upper level houses the master suite and additional bedrooms. The property includes a private garden, covered parking, and premium finishes throughout.",
     features: [
@@ -202,7 +201,7 @@ export const projectsData = [
     area: "3BHK",
     type: "Residential",
     status: "Completed",
-    image:'https://ashishconstruction.in/wp-content/uploads/2021/08/PRAJAKTA-ORCHID-PANDEY-LAYOUT.jpg',
+    image:'/images/PRAJAKTA-ORCHID-PANDEY-LAYOUT.jpg',
     description: "Spacious duplex with garden and parking facility.",
     fullDescription: "This elegant duplex home combines traditional charm with modern conveniences across 2800 sq ft of thoughtfully designed space. The ground floor features an open living area, modern kitchen, and guest bedroom, while the upper level houses the master suite and additional bedrooms. The property includes a private garden, covered parking, and premium finishes throughout.",
     features: [
@@ -223,10 +222,37 @@ export const projectsData = [
   },
 
   
-
 {
     id: 9,
-    title: 'Uttam Apartment',
+    title: 'Keshav Enclave',
+    location: "Nandanwan, Nagpur",
+    area: "3BHK",
+    type: "Residential",
+    status: "Completed",
+    image: '/images/keshav-enclave-nandanwan.jpg',
+    description: "Spacious duplex with garden and parking facility.",
+    fullDescription: "This elegant duplex home combines traditional charm with modern conveniences across 2800 sq ft of thoughtfully designed space. The ground floor features an open living area, modern kitchen, and guest bedroom, while the upper level houses the master suite and additional bedrooms. The property includes a private garden, covered parking, and premium finishes throughout.",
+    features: [
+      "Duplex design with 3 bedrooms",
+      "Open-plan ground floor",
+      "Private garden and terrace",
+      "Modern kitchen with breakfast counter",
+      "Master suite with walk-in closet",
+      "Covered parking for 2 cars",
+      "Premium wood flooring",
+      "Energy-efficient lighting"
+    ],
+    gallery: [
+      "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1448630360428-65456885c650?w=800&h=600&fit=crop"
+    ]
+  },
+
+
+{
+    id: 10,
+    title: 'Honey Archana Complex',
     location: "Nandanwan, Nagpur",
     area: "3BHK",
     type: "Residential",
@@ -250,8 +276,6 @@ export const projectsData = [
       "https://images.unsplash.com/photo-1448630360428-65456885c650?w=800&h=600&fit=crop"
     ]
   },
-
-  
 
 {
     id: 10,
@@ -356,8 +380,8 @@ export const projectsData = [
       "Energy-efficient lighting"
     ],
     gallery: [
-      "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=800&h=600&fit=crop",
+      "/images/IMG_20210930_133628-min.jpg",
+      "/images/IMG_20210930_133549-min.jpg",
       "https://images.unsplash.com/photo-1448630360428-65456885c650?w=800&h=600&fit=crop"
     ]
   },
@@ -399,7 +423,7 @@ export const currentProjectsData = [
     type: "Residential",
     status: "In Progress",
     
-    image: "/images/Prajktapark.png",
+    image: "/images/HD PHOTO 1.jpg",
     description: "A 5 level 3BHK luxurious park view apartment located in the lap of nature. A peaceful location in the heart of the city where you can enjoy your mornings with blissful greenery. A Perfect Home with Modern Amenities at Abhyankar Nagar, Nagpur.",    
     fullDescription: "Currently under construction, this prestigious 5-floor luxury apartment complex will feature 40 premium units with breathtaking city views. The project includes a sky lounge, infinity pool, fitness center, and landscaped gardens. Each apartment is designed with premium finishes and smart home features.",
     features: [
@@ -441,28 +465,6 @@ export const currentProjectsData = [
     ]
   },
   
-];
-
-export const carouselData = [
-  {
-      image: '/images/certification.jpeg',
-
-    },
-    {
-      image: '/images/carazol5.JPG',
-
-    },
-  {
-
-    image: "/images/vikashsir.jpeg",
-   
-  },
-    {
-
-    image: "/images/secondProject.jpg",
-   
-  },
-
 ];
 
 export const galleryImages = [
@@ -533,7 +535,7 @@ export const galleryVideos = [
   {
     id: 1,
     title: "Construction Phase 1",
-    thumbnail: "/thumbnails/video1.jpg",
+    thumbnail: "https://madhuprabhaconstructions.in/images/Ashish-Construction-09-13-2025_07_43_PM.png",
     duration: "3:42",
     url: "https://www.youtube.com/embed/UpdIzsq1G6w"
   },
@@ -569,22 +571,14 @@ export const testimonials = [
 export const aboutUsData = {
   title: "About Madhu Prabha Construction",
   shortDescription: "Leading residential construction company with 20 Glorious Years of experience in creating quality construction.",
-  fullDescription: ` Madhu Prabha Constructions began its journey in 2005 as Ashish Construction,
-                 founded with a simple yet powerful vision: to build structures that not only
-                  meet but exceed expectations. Over the years, we have evolved from a small 
-                  construction company to one of Maharashtra's most trusted construction partners.
-                  Our transformation to Madhu Prabha Constructions reflects our growth while maintaining 
-               the core values that have guided us from the beginning. We believe that construction is
-                not just about building structures; it's about creating spaces where lives unfold, businesses 
-                thrive, and communities flourish.
-                  Today, with over 500 completed projects and more than 1000 satisfied clients, we continue 
-               to set new standards in construction excellence, always staying true to our founding principles 
-               of quality, integrity, and customer satisfaction.                
+  fullDescription: ` Madhuprabha Construction was started in the year 2005. The business start was modest with the regular clients in Nagpur. Over the period, in last 25 years, now we are the leading company in the construction group. Our projects not only deal in Nagpur but also in and around Central India. The journey of hard work, dedication, and trust of our clients has brought us this long way. We deal in the commercials and housing society. With the experience in designing and building these, our company has higher standards in terms of quality and at the same time, it remains affordable to everyone. We are also very well known for the perfect carvings and core commitment for every project. With this, we believe to have a futuristic approach so that our work completion is on time for every project undertaken. We also commit the designing a housing society and commercial complex for a progressive India and we adhere to our traditional values which make a place better to live in, with positivity and peace. Quality and transparency are our main criteria. Ashish Constructions is known for its quality factor and service. We do firmly believe that a house is made of walls and beams, but a home is built with love and dreams.
+
+Success is a state of mind. Anything you want, you can have! You just need to have dreams; believe that you deserve those dreams, and work hard to acquire them! This is a motivational factor for our company.              
                   
                   `,
   experience: "20 Glorious Years",
-  projectsCompleted: "200+",
-  happyClients: "150+",
+  projectsCompleted: "25+",
+  happyClients: "200+",
   awards: "25+",
   location: "Nagpur, Maharashtra",
   image: "https://madhuprabhaconstructions.in/images/about.jpg"
@@ -592,8 +586,8 @@ export const aboutUsData = {
 
 export const contactData = {
   address: "UMA Apartment, Behind Binzani Book Depot, Tilak Road, Mahal, Nagpur-2",
-  phone1: "+91 98224 74211",
-  phone2: "+91 95229 01659",
+  phone1: "+91 95229 01659",
+  phone2: "+91 98224 74211",
   email: "info@madhuprabhaconstructions.in",
   googleMapsUrl: "https://www.google.com/maps/place/UMA+Apartment,+Tilak+Road,+Mahal,+Nagpur",
   workingHours : "Mon - Sat: 9:00 AM - 6:00 PM",

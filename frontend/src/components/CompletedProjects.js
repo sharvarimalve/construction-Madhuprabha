@@ -8,7 +8,7 @@ const CompletedProjects = () => {
   const completedProjects = projectsData.filter(project => project.status === 'Completed').slice(0, 4);
 
   return (
-<section className="  bg-white relative overflow-hidden">
+<section className="bg-white relative overflow-hidden">
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     {/* Header */}
     <div className="text-center mb-12 sm:mb-16">

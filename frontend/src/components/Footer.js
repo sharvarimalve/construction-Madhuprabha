@@ -1,7 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Building, Phone, Mail, MapPin, Facebook, Instagram, Twitter, Linkedin, ArrowUp, Sparkles, MessageCircle } from 'lucide-react';
+import { Building, Phone, Mail, MapPin, Facebook, Instagram, Twitter, Linkedin, ArrowUp, Sparkles, MessageCircle, Award, Briefcase, } from 'lucide-react';
 import { contactData } from '../mockData';
+import { FaWhatsapp } from "react-icons/fa";
+
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -12,6 +14,10 @@ const Footer = () => {
     { name: 'Home', path: '/' },
     { name: 'About Us', path: '/about' },
     { name: 'Projects', path: '/projects' },
+    { name: 'Awards', path: '/awards', icon: Award },
+    { name: 'Career', path: '/career', icon: Briefcase },
+    { name: 'Become Partner', path: '/becomePartner' },
+    { name: 'CSR Activity', path: '/csrActivity' },
     { name: 'Gallery', path: '/gallery' },
     { name: 'Contact', path: '/contact' }
   ];
@@ -93,8 +99,10 @@ const Footer = () => {
             <ul className="space-y-4">
               {services.map((service, index) => (
                 <li key={index}>
-                  <span className="group flex items-center text-white-400 cursor-pointer hover:text-red-500 transition-all duration-300">
-                    <span className="transform group-hover:translate-x-2 transition-transform duration-300">{service}</span>
+                  <span className="group flex items-center text-white-400 cursor-pointer  transition-all duration-300">
+                    {/* hover:text-red-500 */}
+                    <span className="transform  transition-transform duration-300">{service}</span>
+                       {/* group-hover:translate-x-2 */}
                   </span>
                 </li>
               ))}
@@ -139,7 +147,7 @@ const Footer = () => {
           <p>© 2025 Madhuprabha Construction. All rights reserved.</p>
           <div className="flex items-center space-x-4 mt-2 sm:mt-0">
             <a href="https://www.rsinfotechsys.com/" className="hover:text-red-500 transition-colors duration-300">
-              © RIGHT SERVE INFOTECH SYSTEMS PVT. LTD. 2022
+           Design and developed by  RIGHT SERVE INFOTECH SYSTEMS PVT. LTD.
             </a>
           </div>
         </div>
@@ -153,15 +161,18 @@ const Footer = () => {
         </button>
 
         {/* WhatsApp Floating Button */}
-        <a
-          href="https://wa.me/9822474211?text=Hello"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="fixed bottom-28 right-8 group w-14 h-14 bg-green-500 text-white border border-green-600 rounded-full shadow-lg 
-                     hover:bg-green-600 transform hover:scale-110 transition-all duration-500 flex items-center justify-center z-50 animate-spin-slow"
-        >
-          <MessageCircle className="w-7 h-7" />
-        </a>
+       
+
+<a
+  href="https://wa.me/9522901659?text=Hello"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="fixed bottom-28 right-8 group w-14 h-14 bg-green-500 text-white border border-green-600 rounded-full shadow-lg 
+             hover:bg-green-600 transform hover:scale-110 transition-all duration-500 flex items-center justify-center z-50 animate-spin-slow"
+>
+  <FaWhatsapp className="w-7 h-7" />
+</a>
+
       </div>
     </footer>
   );

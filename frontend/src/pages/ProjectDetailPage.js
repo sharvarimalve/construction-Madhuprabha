@@ -55,7 +55,23 @@ const ProjectDetailPage = () => {
     );
   }
 
-  const isCurrentProject = project.status === "In Progress";
+  const isCurrentProject = project.status === "Ongoing";
+
+  // Function to get the appropriate PDF brochure for each project
+  const getProjectBrochure = (projectTitle) => {
+    const brochureMap = {
+      "PRAJAKTA LA-MAISON": "/images/Prajakta La Maison_Brochure(4) (2).pdf",
+      "PRAJAKTA PARK": "/images/Prajakta-Park-E-Brochure-New-1_compressed (1)(final).pdf",
+      "PRAJAKTA CLASSIC": "/images/Prajakta-Park-E-Brochure-New-1_compressed.pdf",
+      "Prajakta Green Serenity": "/images/Green Serenity E-brochure..pdf",
+      "keshav enclave nandanwan": "/images/Keshav-Enclave-Brochure.pdf",
+      "Prajakta cross Winds": "/images/Prajakta-Crosswinds-Brochure.pdf",
+      "Prajakta Prabhakamal": "/images/Prajakta-Prabhakamal-Brochure.pdf",
+      "Prajakta Orchid": "/images/Prajakta-Orchid-Brochure.pdf"
+    };
+    
+    return brochureMap[projectTitle] || "/images/Prajakta-Park-E-Brochure-New-1_compressed.pdf";
+  };
 
   const openLightbox = (index) => {
     setCurrentImageIndex(index);
@@ -230,96 +246,101 @@ const ProjectDetailPage = () => {
                   Project Information
                 </h3>
 
-                <div className="space-y-6">
-                  <div className="flex items-start space-x-4">
-                    <MapPin className="w-6 h-6 text-slate-500 mt-1 flex-shrink-0" />
-                    <div>
-                      <div className="font-semibold text-slate-900">Location</div>
-                      <div className="text-slate-600">{project.location}</div>
-                    </div>
-                  </div>
+               <div className="space-y-6">
+  <div className="flex items-start space-x-4">
+    <MapPin className="w-6 h-6 text-slate-500 mt-1 flex-shrink-0" />
+    <div>
+      <div className="font-semibold text-slate-900">Location</div>
+      <div className="text-slate-600">{project.location}</div>
+    </div>
+  </div>
 
-                  <div className="flex items-start space-x-4">
-                    <Home className="w-6 h-6 text-slate-500 mt-1 flex-shrink-0" />
-                    <div>
-                      <div className="font-semibold text-slate-900">Type</div>
-                      <div className="text-slate-600">{project.type}</div>
-                    </div>
-                  </div>
+  <div className="flex items-start space-x-4">
+    <Home className="w-6 h-6 text-slate-500 mt-1 flex-shrink-0" />
+    <div>
+      <div className="font-semibold text-slate-900">Type</div>
+      <div className="text-slate-600">{project.type}</div>
+    </div>
+  </div>
 
-                  <div className="flex items-start space-x-4">
-                    <Calendar className="w-6 h-6 text-slate-500 mt-1 flex-shrink-0" />
-                    <div>
-                      <div className="font-semibold text-slate-900">
-                        {isCurrentProject ? "Expected Completion" : "Completed"}
-                      </div>
-                      <div className="text-slate-600">
-                        {isCurrentProject
-                          ? project.expectedCompletion
-                          : project.completionDate}
-                      </div>
-                    </div>
-                  </div>
+  <div className="flex items-start space-x-4">
+    <Calendar className="w-6 h-6 text-slate-500 mt-1 flex-shrink-0" />
+    <div>
+      <div className="font-semibold text-slate-900">
+        {isCurrentProject ? "Ongoing" : "Completed"}
+      </div>
+      <div className="text-slate-600">
+        {isCurrentProject
+          ? project.expectedCompletion
+          : project.completionDate}
+      </div>
+    </div>
+  </div>
 
-                  <div className="flex items-start space-x-4">
-                    <User className="w-6 h-6 text-slate-500 mt-1 flex-shrink-0" />
-                    <div>
-                      <div className="font-semibold text-slate-900">Client</div>
-                      <div className="text-slate-600">{project.client}</div>
-                    </div>
-                  </div>
+  {isCurrentProject && (
+    <div className="flex items-start space-x-4">
+      <TrendingUp className="w-6 h-6 text-slate-500 mt-1 flex-shrink-0" />
+      <div>
+        <div className="font-semibold text-slate-900">Progress</div>
+        <div className="text-slate-600">{project.progress}</div>
+        <div className="mt-2 w-full bg-slate-200 rounded-full h-2"></div>
+      </div>
+    </div>
+  )}
 
-                  <div className="flex items-start space-x-4">
-                    <Award className="w-6 h-6 text-slate-500 mt-1 flex-shrink-0" />
-                    <div>
-                      <div className="font-semibold text-slate-900">Architect</div>
-                      <div className="text-slate-600">{project.architect}</div>
-                    </div>
-                  </div>
+  {/* Architecture */}
+  <div className="flex items-start space-x-4">
+    <Award className="w-6 h-6 text-slate-500 mt-1 flex-shrink-0" />
+    <div>
+      <div className="font-semibold text-slate-900">Architecture</div>
+      <div className="text-slate-600">Arjun Kamdi, Arya Vertex</div>
+    </div>
+  </div>
 
-                  {isCurrentProject && (
-                    <div className="flex items-start space-x-4">
-                      <TrendingUp className="w-6 h-6 text-slate-500 mt-1 flex-shrink-0" />
-                      <div>
-                        <div className="font-semibold text-slate-900">
-                          Progress
-                        </div>
-                        <div className="text-slate-600">{project.progress}</div>
-                        <div className="mt-2 w-full bg-slate-200 rounded-full h-2"></div>
-                      </div>
-                    </div>
-                  )}
-                </div>
+  {/* Vastu Consultant */}
+  <div className="flex items-start space-x-4">
+    <User className="w-6 h-6 text-slate-500 mt-1 flex-shrink-0" />
+    <div>
+      <div className="font-semibold text-slate-900">Vastu Consultant</div>
+      <div className="text-slate-600">Kirti Bhai</div>
+    </div>
+  </div>
+</div>
+
+
+
+
 
                 {/* CTA Button */}
-                <div className="mt-8 pt-6 border-t border-slate-200">
-                  <Link
-                    to="/contact"
-                    className={`group relative w-full py-4 px-6 font-bold rounded-2xl overflow-hidden transition-all duration-500 transform hover:scale-105 flex items-center justify-center space-x-2`}
-                  >
-                    <div
-                      className={`absolute inset-0 bg-gradient-to-r ${
-                        isCurrentProject
-                          ? "from-emerald-500 via-green-500 to-teal-500 group-hover:from-green-400 group-hover:via-emerald-500 group-hover:to-teal-600"
-                          : "from-amber-500 via-yellow-500 to-orange-500 group-hover:from-yellow-400 group-hover:via-amber-500 group-hover:to-orange-600"
-                      } transition-all duration-500`}
-                    ></div>
+               <div className="mt-8 pt-6 border-t border-slate-200">
+  <a
+    href={getProjectBrochure(project.title)}
+    target="_blank"
+    rel="noopener noreferrer"
+    className={`group relative w-full py-4 px-6 font-bold rounded-2xl overflow-hidden transition-all duration-500 transform hover:scale-105 flex items-center justify-center space-x-2`}
+  >
+    <div
+      className={`absolute inset-0 bg-gradient-to-r ${
+        isCurrentProject
+          ? "from-emerald-500 via-green-500 to-teal-500 group-hover:from-green-400 group-hover:via-emerald-500 group-hover:to-teal-600"
+          : "from-amber-500 via-yellow-500 to-orange-500 group-hover:from-yellow-400 group-hover:via-amber-500 group-hover:to-orange-600"
+      } transition-all duration-500`}
+    ></div>
 
-                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
 
-                    <div
-                      className={`absolute -inset-1 bg-gradient-to-r ${
-                        isCurrentProject
-                          ? "from-emerald-400 to-green-500"
-                          : "from-amber-400 to-yellow-500"
-                      } rounded-2xl blur opacity-30 group-hover:opacity-60 transition-opacity duration-500`}
-                    ></div>
+    <div
+      className={`absolute -inset-1 bg-gradient-to-r ${
+        isCurrentProject ? "from-emerald-400 to-green-500" : "from-amber-400 to-yellow-500"
+      } rounded-2xl blur opacity-30 group-hover:opacity-60 transition-opacity duration-500`}
+    ></div>
 
-                    <span className="relative z-10 text-white">
-                      Get Similar Project
-                    </span>
-                  </Link>
-                </div>
+    <span className="relative z-10 text-white">
+      Download E-Brochure
+    </span>
+  </a>
+</div>
+
               </div>
             </div>
           </div>
