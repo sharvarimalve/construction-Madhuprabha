@@ -14,7 +14,7 @@ const aboutUsDataSafe = {
     { icon: Shield, title: "Reliability", description: "On-time delivery and commitment to client satisfaction." },
     { icon: Lightbulb, title: "Innovative Designs", description: "Creative and functional designs tailored to your lifestyle." }
   ],
-  image: "/images/about.jpg", // public folder image
+  image: "https://images.pexels.com/photos/834892/pexels-photo-834892.jpeg?auto=compress&cs=tinysrgb&w=800", // public folder image
 };
 
 const AboutSection = ({ data = aboutUsDataSafe }) => {
@@ -34,67 +34,42 @@ const AboutSection = ({ data = aboutUsDataSafe }) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Left content */}
-          <div className="space-y-8">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
-              About{" "}
-              <span className="bg-gradient-to-r from-red-700 to-red-500 bg-clip-text text-transparent">
-                Us
-              </span>
+       {/* Left Content */}
+          <div>
+            <h2 className="text-4xl md:text-5xl font-bold text-slate-800 mb-6">
+              About <span className="text-red-500">Madhuprabha</span>
             </h2>
-
-            <p className="text-lg text-gray-600 leading-relaxed">
-              {data.shortDescription}
+            <p className="text-lg text-slate-600 mb-6 leading-relaxed">
+              Since 1998, Madhuprabha Constructions has been at the forefront of India's construction industry, 
+              delivering exceptional residential, commercial, and infrastructure projects with unwavering commitment 
+              to quality and innovation.
+            </p>
+            <p className="text-lg text-slate-600 mb-8 leading-relaxed">
+              Our journey began with a simple vision: to transform blueprints into lasting legacies. Today, we stand 
+              as a testament to architectural excellence, having crafted spaces that inspire, protect, and endure.
             </p>
 
-            {/* Stats */}
-            <div className="grid grid-cols-3 gap-6">
-              <div className="text-center">
-                <Award className="w-8 h-8 mx-auto text-red-600 mb-2" />
-                <div className="text-2xl font-bold text-gray-900">
-                  {data.experience}+
+            {/* Mission & Values */}
+            <div className="space-y-4">
+              <div className="flex items-start space-x-3">
+                <div className="w-2 h-2 bg-amber-500 rounded-full mt-3 flex-shrink-0"></div>
+                <div>
+                  <h4 className="font-semibold text-slate-800 mb-2">Our Mission</h4>
+                  <p className="text-slate-600">To create sustainable, innovative structures that enhance communities and exceed expectations.</p>
                 </div>
-                <div className="text-sm text-gray-600">Years Experience</div>
               </div>
-
-              <div className="text-center">
-                <Users className="w-8 h-8 mx-auto text-red-600 mb-2" />
-                <div className="text-2xl font-bold text-gray-900">
-                  {data.projectsCompleted}+
+              <div className="flex items-start space-x-3">
+                <div className="w-2 h-2 bg-amber-500 rounded-full mt-3 flex-shrink-0"></div>
+                <div>
+                  <h4 className="font-semibold text-slate-800 mb-2">Our Values</h4>
+                  <p className="text-slate-600">Integrity, Quality, Innovation, and Customer Satisfaction guide every decision we make.</p>
                 </div>
-                <div className="text-sm text-gray-600">Projects Completed</div>
-              </div>
-
-              <div className="text-center">
-                <CheckCircle className="w-8 h-8 mx-auto text-red-600 mb-2" />
-                <div className="text-2xl font-bold text-gray-900">
-                  {data.happyClients}+
-                </div>
-                <div className="text-sm text-gray-600">Happy Clients</div>
               </div>
             </div>
 
-            {/* Highlights */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-6">
-              {data.highlights.map((item, index) => {
-                const Icon = item.icon;
-                return (
-                  <div key={index} className="text-center p-4 bg-red-50 rounded-2xl shadow hover:shadow-lg transition-all duration-300">
-                    <Icon className="w-6 h-6 text-red-600 mx-auto mb-2" />
-                    <h4 className="font-bold text-gray-900 mb-1">{item.title}</h4>
-                    <p className="text-gray-600 text-sm">{item.description}</p>
-                  </div>
-                );
-              })}
-            </div>
-
-            {/* CTA Button */}
-            <Link
-              to="/about"
-              className="inline-flex items-center space-x-2 px-6 py-3 bg-red-600 text-white font-semibold rounded-full shadow hover:bg-red-700 transition-all duration-300 mt-6"
-            >
-              <span>Read More</span>
-              <ArrowRight className="w-5 h-5" />
-            </Link>
+          <button className="mt-8 bg-red-600 text-white px-8 py-3 rounded-full font-medium hover:bg-red-700 transition-all duration-300 transform hover:scale-105">
+  Learn More About Us
+</button>
           </div>
 
           {/* Right Image */}

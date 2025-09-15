@@ -52,68 +52,68 @@ const AboutPage = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-     <section
-  className="relative pt-24 sm:pt-28 pb-16 sm:pb-20   text-white overflow-hidden"
-  style={{
-    backgroundImage: "url('/images/redbilding.jpg')", // अपनी image path डालें
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-  }}
->
-  {/* White blur lights */}
-  <div className="absolute inset-0 opacity-20">
-    <div className="absolute top-10 sm:top-20 right-10 sm:right-20 w-48 sm:w-96 h-48 sm:h-96 bg-white rounded-full blur-2xl"></div>
-    <div className="absolute bottom-10 sm:bottom-20 left-10 sm:left-20 w-40 sm:w-64 h-40 sm:h-64 bg-white rounded-full blur-2xl"></div>
-  </div>
+      <section
+        className="relative pt-24 sm:pt-28 pb-16 sm:pb-20   text-white overflow-hidden"
+        style={{
+          backgroundImage: "url('/images/redbilding.jpg')", // अपनी image path डालें
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        {/* White blur lights */}
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute top-10 sm:top-20 right-10 sm:right-20 w-48 sm:w-96 h-48 sm:h-96 bg-white rounded-full blur-2xl"></div>
+          <div className="absolute bottom-10 sm:bottom-20 left-10 sm:left-20 w-40 sm:w-64 h-40 sm:h-64 bg-white rounded-full blur-2xl"></div>
+        </div>
 
-  {/* Overlay to darken image */}
-  <div className="absolute inset-0 "></div>
+        {/* Overlay to darken image */}
+        <div className="absolute inset-0 "></div>
 
-  <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div className="text-center mb-12 sm:mb-16">
-      <div className="inline-flex items-center px-3 sm:px-4 py-1.5 sm:py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full mb-4 sm:mb-6">
-        <span className="text-white font-semibold text-xs sm:text-sm uppercase tracking-wider">
-          About Us
-        </span>
-      </div>
-      <h1 className="text-3xl sm:text-5xl md:text-7xl font-bold leading-tight mb-4 sm:mb-6">
-        <span className="bg-gradient-to-r from-white to-red-200 bg-clip-text text-transparent">
-          Building Excellence
-        </span>
-        <br />
-        <span className="text-white">Since 2005</span>
-      </h1>
-      <p className="text-base sm:text-lg md:text-xl text-red-100 max-w-3xl sm:max-w-4xl mx-auto leading-relaxed">
-        {aboutUsData.shortDescription}
-      </p>
-    </div>
-
-    {/* Achievements */}
-    <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
-      {achievements.map((achievement, index) => {
-        const Icon = achievement.icon;
-        return (
-          <div
-            key={index}
-            className="text-center group"
-          >
-            <div
-              className={`w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r ${achievement.color} rounded-2xl flex items-center justify-center mx-auto mb-3 sm:mb-4 group-hover:scale-110 transition-transform duration-300 shadow-xl`}
-            >
-              <Icon className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12 sm:mb-16">
+            <div className="inline-flex items-center px-3 sm:px-4 py-1.5 sm:py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full mb-4 sm:mb-6">
+              <span className="text-white font-semibold text-xs sm:text-sm uppercase tracking-wider">
+                About Us
+              </span>
             </div>
-            <div className="text-2xl sm:text-4xl font-bold text-white mb-1 sm:mb-2">
-              {achievement.number}
-            </div>
-            <div className="text-xs sm:text-sm text-red-100 font-medium">
-              {achievement.label}
-            </div>
+            <h1 className="text-3xl sm:text-5xl md:text-7xl font-bold leading-tight mb-4 sm:mb-6">
+              <span className="bg-gradient-to-r from-white to-red-200 bg-clip-text text-transparent">
+                Building Excellence
+              </span>
+              <br />
+              <span className="text-white">Since 2005</span>
+            </h1>
+            <p className="text-base sm:text-lg md:text-xl text-red-100 max-w-3xl sm:max-w-4xl mx-auto leading-relaxed">
+              {aboutUsData.shortDescription}
+            </p>
           </div>
-        );
-      })}
-    </div>
-  </div>
-</section>
+
+          {/* Achievements */}
+          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+            {achievements.map((achievement, index) => {
+              const Icon = achievement.icon;
+              return (
+                <div
+                  key={index}
+                  className="text-center group"
+                >
+                  <div
+                    className={`w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r ${achievement.color} rounded-2xl flex items-center justify-center mx-auto mb-3 sm:mb-4 group-hover:scale-110 transition-transform duration-300 shadow-xl`}
+                  >
+                    <Icon className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
+                  </div>
+                  <div className="text-2xl sm:text-4xl font-bold text-white mb-1 sm:mb-2">
+                    {achievement.number}
+                  </div>
+                  <div className="text-xs sm:text-sm text-red-100 font-medium">
+                    {achievement.label}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
 
 
       {/* Journey Section */}
@@ -214,63 +214,60 @@ const AboutPage = () => {
         </div>
       </section>
 
-{/* Our Team Section */}
-<section className="py-16 sm:py-20 bg-white relative">
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-    {/* Heading */}
-    <div className="text-center mb-12 sm:mb-16">
-      <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">
-        Our{" "}
-        <span className="bg-gradient-to-r from-red-600 to-red-400 bg-clip-text text-transparent">
-          Team
-        </span>
-      </h2>
-      <p className="text-base sm:text-xl text-gray-600 max-w-2xl sm:max-w-3xl mx-auto">
-        Meet the leaders who drive our vision and ensure excellence in every project.
-      </p>
-    </div>
-
-    {/* Team Members */}
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 place-items-center">
-      {teamMembers.map((member, index) => (
-        <div
-          key={index}
-          className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl border border-red-100 transition-all duration-300 overflow-hidden w-full max-w-sm"
-        >
-          {/* Image */}
-          <div className="flex justify-center mt-6">
-            <img
-              src={member.image}
-              alt={member.name}
-              className="w-32 h-32 sm:w-36 sm:h-36 object-cover rounded-full border-4 border-white shadow-lg group-hover:scale-105 transition-transform duration-300"
-            />
+      {/* Our Team Section */}
+      <section className="py-16 sm:py-20 bg-white relative">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          {/* Heading */}
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">
+              Our{" "}
+              <span className="bg-gradient-to-r from-red-600 to-red-400 bg-clip-text text-transparent">
+                Team
+              </span>
+            </h2>
+            <p className="text-base sm:text-xl text-gray-600 max-w-2xl sm:max-w-3xl mx-auto">
+              Meet the leaders who drive our vision and ensure excellence in every project.
+            </p>
           </div>
 
-          {/* Content */}
-          <div className="px-6 py-6 text-center">
-            <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-1">
-              {member.name}
-            </h3>
-            <p className="text-red-600 font-semibold mb-2">{member.role}</p>
-            <p className="text-sm text-gray-600">{member.experience}</p>
-          </div>
+          {/* Team Members */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 place-items-center">
+            {teamMembers.map((member, index) => (
+              <div
+                key={index}
+                className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl border border-red-100 transition-all duration-300 overflow-hidden w-full max-w-sm"
+              >
+                {/* Image */}
+                <div className="flex justify-center mt-6">
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    className="w-32 h-32 sm:w-36 sm:h-36 object-cover rounded-full border-4 border-white shadow-lg group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
 
-          {/* Accent bar */}
-          <div className="h-1 w-full bg-gradient-to-r from-red-500 to-red-400"></div>
+                {/* Content */}
+                <div className="px-6 py-6 text-center">
+                  <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-1">
+                    {member.name}
+                  </h3>
+                  <p className="text-red-600 font-semibold mb-2">{member.role}</p>
+                  <p className="text-sm text-gray-600">{member.experience}</p>
+                </div>
+
+                {/* Accent bar */}
+                <div className="h-1 w-full bg-gradient-to-r from-red-500 to-red-400"></div>
+              </div>
+            ))}
+          </div>
         </div>
-      ))}
-    </div>
-  </div>
 
-  {/* Background Accent */}
-  <div className="absolute inset-0 -z-10">
-    <div className="absolute top-20 left-10 w-40 h-40 bg-red-100 rounded-full blur-3xl opacity-30"></div>
-    <div className="absolute bottom-20 right-10 w-56 h-56 bg-red-200 rounded-full blur-3xl opacity-40"></div>
-  </div>
-</section>
-
-
-
+        {/* Background Accent */}
+        <div className="absolute inset-0 -z-10">
+          <div className="absolute top-20 left-10 w-40 h-40 bg-red-100 rounded-full blur-3xl opacity-30"></div>
+          <div className="absolute bottom-20 right-10 w-56 h-56 bg-red-200 rounded-full blur-3xl opacity-40"></div>
+        </div>
+      </section>
       <Footer />
     </div>
   );

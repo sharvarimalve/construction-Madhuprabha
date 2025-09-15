@@ -31,9 +31,9 @@ const ProjectsPage = () => {
       <section
   className="relative pt-28 pb-20 bg-gradient-to-br  from-red-700 via-red-600 to-red-500 text-white overflow-hidden"
   style={{
-    backgroundImage: "url('/images/projectdone.jpg')", // यहाँ अपनी image का path दो
+    backgroundImage: "url(https://images.pexels.com/photos/1181534/pexels-photo-1181534.jpeg?auto=compress&cs=tinysrgb&w=800)", // यहाँ अपनी image का path दो
     backgroundSize: "fill",
-    backgroundPosition: "center",
+    backgroundPosition: "bg-center",
   }}
 >
   {/* Overlay for readability */}
